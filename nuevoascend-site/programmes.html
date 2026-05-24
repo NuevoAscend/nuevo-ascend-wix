@@ -4,34 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Programmes | Nuevo Ascend — Leadership Development & Consultancy</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@700;800;900&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --black:   #0A0A0A;
-    --charcoal:#141414;
-    --panel:   #1A1A1A;
-    --gold:    #C8960C;
-    --gold-lt: #E8B830;
-    --gold-dk: #9A7008;
-    --green:   #2E8B1A;
-    --white:   #FFFFFF;
-    --offwhite:#F5F2EC;
-    --grey:    #888888;
-    --lgrey:   #CCCCCC;
-  }
+<style>:root {
+  --black:#080808; --charcoal:#111111; --panel:#181818;
+  --gold:#C8960C; --gold-lt:#E8B830; --green:#2E8B1A;
+  --white:#FFFFFF; --off:#F5F0E8; --grey:#777777; --lgrey:#BBBBBB;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:hidden}
+body{background:#080808;color:#F5F0E8;font-family:Arial,sans-serif;overflow-x:hidden;margin:0;padding:0}
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html { scroll-behavior: smooth; }
+  html{overflow-x:hidden}
 
-  body {
-    background: var(--black);
-    color: var(--offwhite);
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+  
 
   /* ── NOISE TEXTURE OVERLAY ── */
   body::before {
@@ -59,7 +45,7 @@
   }
 
   .nav-logo {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Arial Black', sans-serif;
     font-weight: 900;
     font-size: 22px;
     letter-spacing: 2px;
@@ -101,7 +87,7 @@
   /* ── HERO ── */
   .hero {
     min-height: auto;
-  padding-top: 100px;
+  padding-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,19 +102,18 @@
   }
 
   .hero-eyebrow {
-    font-family: 'Barlow', sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 4px;
     text-transform: uppercase;
     color: var(--gold);
     margin-bottom: 24px;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.2s forwards;
+    
   }
 
   .hero h1 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Arial Black', sans-serif;
     font-weight: 900;
     font-size: clamp(56px, 10vw, 110px);
     line-height: 0.9;
@@ -136,8 +121,7 @@
     text-transform: uppercase;
     color: var(--white);
     margin-bottom: 8px;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.4s forwards;
+    
   }
 
   .hero h1 em {
@@ -147,15 +131,14 @@
   }
 
   .hero-sub {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: Georgia, serif;
     font-size: clamp(18px, 2.5vw, 26px);
     font-style: italic;
     color: var(--lgrey);
     margin: 28px auto 48px;
     max-width: 640px;
     line-height: 1.5;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.6s forwards;
+    
   }
 
   .hero-stats {
@@ -163,8 +146,7 @@
     gap: 60px;
     justify-content: center;
     flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 0.8s 0.8s forwards;
+    
   }
 
   .stat {
@@ -172,7 +154,7 @@
   }
 
   .stat-val {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Arial Black', sans-serif;
     font-weight: 900;
     font-size: 42px;
     color: var(--gold);
@@ -194,8 +176,7 @@
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--gold), transparent);
     margin: 60px auto 0;
-    opacity: 0;
-    animation: fadeUp 0.8s 1s forwards;
+    
   }
 
   /* ── PROGRAMME NAV PILLS ── */
@@ -251,15 +232,12 @@
 
   /* ── PROGRAMME HEADER ── */
   .prog-header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-    margin-bottom: 80px;
+    display: block;
+    margin-bottom: 48px;
   }
 
   .prog-number {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Arial Black', sans-serif;
     font-weight: 900;
     font-size: 140px;
     line-height: 1;
@@ -284,7 +262,7 @@
   }
 
   .prog-title {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Arial Black', sans-serif;
     font-weight: 900;
     font-size: clamp(40px, 5vw, 68px);
     line-height: 0.95;
@@ -297,7 +275,7 @@
   .prog-title span { color: var(--gold); display: block; }
 
   .prog-description {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: Georgia, serif;
     font-size: 20px;
     line-height: 1.65;
     color: var(--lgrey);
@@ -322,43 +300,40 @@
   /* ── INFO CARDS ── */
   .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1px;
-    background: rgba(200,150,12,0.15);
-    border: 1px solid rgba(200,150,12,0.15);
-    margin-bottom: 60px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 56px;
+    background: none;
+    border: none;
   }
 
   .info-card {
     background: var(--panel);
-    padding: 32px 28px;
-    transition: background 0.3s;
+    border: 1px solid rgba(200,150,12,0.2);
+    padding: 22px 18px;
+    transition: border-color 0.3s, background 0.3s;
   }
 
-  .info-card:hover { background: #222; }
+  .info-card:hover { background: #1e1e1e; border-color: rgba(200,150,12,0.45); }
 
-  .info-card-icon {
-    font-size: 24px;
-    margin-bottom: 12px;
-    display: block;
-  }
+  .info-card-icon { display: none; }
 
   .info-card-label {
     font-size: 10px;
     font-weight: 700;
-    letter-spacing: 2.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     display: block;
   }
 
   .info-card-value {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    color: var(--white);
-    line-height: 1.2;
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--off);
+    line-height: 1.5;
   }
 
   /* ── TWO-COL CONTENT ── */
@@ -370,7 +345,7 @@
   }
 
   .content-block h3 {
-    font-family: 'Barlow', sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: 700;
     font-size: 13px;
     letter-spacing: 2.5px;
@@ -411,7 +386,7 @@
   }
 
   .pricing-section h3 {
-    font-family: 'Barlow', sans-serif;
+    font-family: Arial, sans-serif;
     font-weight: 700;
     font-size: 13px;
     letter-spacing: 2.5px;
@@ -470,7 +445,7 @@
   }
 
   .price-amount {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Arial Black', sans-serif;
     font-weight: 900;
     font-size: 42px;
     color: var(--gold);
@@ -522,7 +497,7 @@
   }
 
   .cta-strip-text h4 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Arial Black', sans-serif;
     font-weight: 800;
     font-size: 26px;
     color: var(--white);
@@ -584,7 +559,7 @@
   }
 
   .quote-callout p {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: Georgia, serif;
     font-size: 22px;
     font-style: italic;
     color: var(--offwhite);
@@ -597,11 +572,12 @@
     background: linear-gradient(90deg, transparent, rgba(200,150,12,0.3), transparent);
   }
 
-  /* ── PHOTO PLACEHOLDERS ── */
+  /* ── PHOTO GALLERY ── */
   .photo-strip {
     display: grid;
-    gap: 12px;
+    gap: 16px;
     margin: 48px 0;
+    align-items: stretch;
   }
   .photo-strip.cols-3 { grid-template-columns: repeat(3, 1fr); }
   .photo-strip.cols-2-1 { grid-template-columns: 2fr 1fr; }
@@ -610,69 +586,36 @@
 
   .photo-ph {
     position: relative;
-    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+    max-height: 280px;
     background: var(--panel);
-    border: 1px dashed rgba(200,150,12,0.25);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: border-color 0.3s, background 0.3s;
-    cursor: pointer;
-  }
-  .photo-ph:hover {
-    border-color: rgba(200,150,12,0.6);
-    background: #1e1e1e;
-  }
-  .photo-ph::before {
-    content: '';
+    border: 1px solid rgba(200,150,12,0.25);
+    overflow: hidden;
+    padding: 0;
     display: block;
-    padding-top: 66%;
+    transition: border-color 0.3s;
   }
-  .photo-ph.tall::before { padding-top: 110%; }
-  .photo-ph.square::before { padding-top: 100%; }
-  .photo-ph.wide::before { padding-top: 45%; }
 
-  .photo-ph-inner {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
+  .photo-ph:hover {
+    border-color: rgba(200,150,12,0.55);
   }
-  .photo-ph-icon {
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(200,150,12,0.3);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    color: var(--gold);
-    opacity: 0.6;
-    transition: opacity 0.3s;
+
+  .photo-ph img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    min-height: 0 !important;
   }
-  .photo-ph:hover .photo-ph-icon { opacity: 1; }
-  .photo-ph-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(200,150,12,0.4);
-    text-align: center;
-    line-height: 1.5;
-    transition: color 0.3s;
-  }
-  .photo-ph:hover .photo-ph-label { color: rgba(200,150,12,0.7); }
+
+  .photo-ph-inner,
+  .photo-ph-icon,
+  .photo-ph-label,
   .photo-ph-size {
-    font-size: 9px;
-    letter-spacing: 1px;
-    color: rgba(136,136,136,0.5);
-    text-align: center;
+    display: none !important;
   }
   .photo-caption-bar {
     display: flex;
@@ -706,7 +649,7 @@
   }
 
   .footer-cta h2 {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Arial Black', sans-serif;
     font-weight: 900;
     font-size: clamp(48px, 7vw, 90px);
     text-transform: uppercase;
@@ -719,7 +662,7 @@
   .footer-cta h2 span { color: var(--gold); display: block; }
 
   .footer-cta p {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: Georgia, serif;
     font-size: 22px;
     font-style: italic;
     color: var(--lgrey);
@@ -748,7 +691,7 @@
   }
 
   footer .logo {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Arial Black', sans-serif;
     font-weight: 900;
     font-size: 18px;
     letter-spacing: 2px;
@@ -781,50 +724,757 @@
   footer .footer-links a:hover { color: var(--gold); }
 
   /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
+  
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+  
+.tagline-track:hover { animation-play-state: paused; }
+.tagline-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+}
+
+
+
+  100% { transform: translateX(-50%); }
+}
+
+
+/* ══════════════════════════════════════════
+   HAMBURGER MENU
+══════════════════════════════════════════ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 300;
+  background: none;
+  border: none;
+  outline: none;
+}
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #C8960C;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 0; right: -100%;
+  width: min(320px, 85vw);
+  height: 100vh;
+  background: #0A0A0A;
+  border-left: 1px solid rgba(200,150,12,0.2);
+  z-index: 250;
+  transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
+  display: flex;
+  flex-direction: column;
+  padding: 100px 40px 40px;
+  gap: 8px;
+}
+.mobile-drawer.open { right: 0; }
+.mobile-drawer a {
+  display: block;
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #BBBBBB;
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(200,150,12,0.1);
+  transition: color 0.3s, padding-left 0.3s;
+}
+.mobile-drawer a:hover,
+.mobile-drawer a:active { color: #C8960C; padding-left: 8px; }
+.mobile-drawer a.drawer-cta {
+  margin-top: 20px;
+  background: #C8960C;
+  color: #000 !important;
+  padding: 16px 24px !important;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 3px;
+  border-bottom: none;
+}
+.mobile-drawer a.drawer-cta:hover { background: #E8B830; padding-left: 24px !important; }
+.mobile-drawer-close {
+  position: absolute;
+  top: 24px; right: 24px;
+  background: none;
+  border: 1px solid rgba(200,150,12,0.3);
+  color: #C8960C;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.mobile-drawer-close:hover { background: rgba(200,150,12,0.1); }
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 240;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  backdrop-filter: blur(4px);
+}
+.drawer-overlay.open { opacity: 1; pointer-events: all; }
+.mobile-drawer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(200,150,12,0.1);
+}
+.mobile-drawer-socials a {
+  width: 40px; height: 40px;
+  border: 1px solid rgba(200,150,12,0.3);
+  display: flex; align-items: center; justify-content: center;
+  color: #777;
+  font-size: 11px; font-weight: 700;
+  text-decoration: none;
+  padding: 0 !important;
+  border-bottom: 1px solid rgba(200,150,12,0.3) !important;
+  transition: all 0.3s;
+}
+.mobile-drawer-socials a:hover { border-color: #C8960C !important; color: #C8960C; }
+
+/* ══════════════════════════════════════════
+   GLOBAL MOBILE FIXES
+══════════════════════════════════════════ */
+@media(max-width:900px) {
+  /* Nav */
+  nav { padding: 0 20px; height: 68px; }
+  .nav-links { display: none !important; }
+  .hamburger { display: flex; }
+
+  /* Hero — hide right column photo, show text only */
+  .hero { grid-template-columns: 1fr !important; padding: 80px 24px 60px !important; gap: 40px; }
+  .hero-visual { display: none !important; }
+  .hero-scroll { display: none; }
+  .hero h1 { font-size: clamp(48px,12vw,80px) !important; }
+
+  /* About page hero photo — move below hero text on mobile */
+  .page-hero { padding: 80px 24px 60px !important; }
+  .page-hero > div[style*="position:absolute"][style*="right:60px"] {
+    position: relative !important;
+    top: auto !important; right: auto !important;
+    width: 100% !important;
+    height: 280px !important;
+    margin-top: 24px;
+    border: 1px solid rgba(200,150,12,0.3);
   }
 
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+  /* Contact page hero photo — same treatment */
+  .page-hero > div[style*="right:60px"] {
+    position: relative !important;
+    top: auto !important; right: auto !important;
+    width: 100% !important;
+    height: 260px !important;
+    margin-top: 20px;
   }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    nav { padding: 16px 24px; }
-    .nav-links { display: none; }
-    .container { padding: 0 24px; }
-    .prog-header { grid-template-columns: 1fr; gap: 40px; }
-    .two-col { grid-template-columns: 1fr; gap: 40px; }
-    .prog-nav { padding: 12px 24px; }
-    footer { padding: 40px 24px; flex-direction: column; text-align: center; }
-    .cta-strip { padding: 32px 28px; }
-    .footer-cta { padding: 80px 24px; }
+  /* Stats bar */
+  .stats-bar { grid-template-columns: 1fr 1fr !important; padding: 0 !important; }
+  .stat-item { padding: 24px 16px; }
+  .stat-num { font-size: 38px; }
+
+  /* Story grid */
+  .story-grid { grid-template-columns: 1fr !important; gap: 40px; padding: 0 !important; }
+  .story-img-side { display: none; }
+
+  /* Services grid */
+  .services-grid { grid-template-columns: 1fr !important; }
+
+  /* Who we serve */
+  .serve-grid { grid-template-columns: 1fr 1fr !important; gap: 16px; }
+
+  /* Trust logos */
+  .trust-logos { gap: 24px; }
+  .trust-logo { font-size: 14px; }
+  .featured-logos { gap: 20px; }
+
+  /* Award banner */
+  .award-banner { flex-direction: column; gap: 20px; padding: 40px 24px; }
+  .award-right { max-width: 100%; font-size: 16px; }
+
+  /* Process steps */
+  .process-steps { grid-template-columns: 1fr 1fr !important; gap: 32px; }
+  .process-steps::before { display: none; }
+
+  /* Testimonials */
+  .testi-grid { grid-template-columns: 1fr !important; }
+
+  /* Values */
+  .values-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Credentials */
+  .cred-grid { grid-template-columns: 1fr 1fr !important; gap: 16px; }
+
+  /* Footer */
+  .site-footer { padding: 48px 24px 28px; }
+  .footer-top { grid-template-columns: 1fr 1fr !important; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 16px; }
+
+  /* Programme cards */
+  .prog-header { grid-template-columns: 1fr !important; gap: 32px; }
+  .two-col { grid-template-columns: 1fr !important; gap: 32px; }
+  .pricing-grid { grid-template-columns: 1fr !important; }
+  .prog-nav { padding: 12px 16px; gap: 6px; }
+  .prog-pill { font-size: 10px; padding: 6px 12px; }
+  .photo-strip.cols-3,
+  .photo-strip.cols-2-1,
+  .photo-strip.cols-1-2,
+  .photo-strip.cols-4 { grid-template-columns: 1fr !important; }
+
+  /* Contact form */
+  .contact-main { grid-template-columns: 1fr !important; gap: 40px; padding: 60px 24px !important; }
+  .form-row { grid-template-columns: 1fr !important; }
+  .booking-options { padding: 60px 24px; }
+  .options-grid { grid-template-columns: 1fr !important; }
+  .faq-grid { grid-template-columns: 1fr !important; }
+  .faq-item:nth-child(even) { border-right: none; }
+
+  /* Info grid */
+  .info-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* CTA section */
+  .cta-section, .about-cta, .footer-cta, .contact-cta { padding: 80px 24px !important; }
+  .cta-h2, .about-cta h2, .footer-cta h2 { font-size: clamp(44px,11vw,72px) !important; letter-spacing:-1px; }
+
+  /* Sections */
+  .section, .story, .values, .credentials, .mission,
+  .timeline-section, .intro, .booking-options, .faq-section { padding: 72px 24px !important; }
+
+  /* Intro grid */
+  .intro-grid { grid-template-columns: 1fr !important; }
+  .intro-side { position: static !important; }
+
+  /* Timeline */
+  .tl-track { padding-left: 32px; }
+
+  /* Spotify */
+  .spotify-strip { padding: 20px 24px; flex-direction: column; gap: 16px; }
+
+  /* Featured */
+  .featured-strip { padding: 40px 24px; }
+  .featured-logo-item svg { transform: scale(0.85); }
+
+  /* Page hero num */
+  .page-hero-num { display: none; }
+
+  /* CTA strip */
+  .cta-strip { flex-direction: column; gap: 20px; padding: 32px 24px; }
+
+  /* Tagline strip */
+  
+  
+}
+
+@media(max-width:480px) {
+  .serve-grid { grid-template-columns: 1fr !important; }
+  .values-grid { grid-template-columns: 1fr !important; }
+  .cred-grid { grid-template-columns: 1fr !important; }
+  .process-steps { grid-template-columns: 1fr !important; }
+  .footer-top { grid-template-columns: 1fr !important; }
+  .stats-bar { grid-template-columns: 1fr 1fr !important; }
+  .hero h1 { font-size: clamp(42px,13vw,64px) !important; }
+}
+
+
+/* CSS-only reveal — no JS needed */
+
+
+
+
+}
+
+}
+/* Stagger delays */
+
+
+
+
+
+/* Make sure .visible class also works for pages that still use it */
+
+
+
+/* CSS-only hamburger */
+#menuToggle { display:none; }
+.hamburger-label {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 300;
+}
+.hamburger-label span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #C8960C;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+  transform-origin: center;
+}
+#menuToggle:checked ~ nav .hamburger-label span:nth-child(1),
+.hamburger-label.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+#menuToggle:checked ~ nav .hamburger-label span:nth-child(2),
+.hamburger-label.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+#menuToggle:checked ~ nav .hamburger-label span:nth-child(3),
+.hamburger-label.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-drawer { position:fixed; top:0; right:-100%; width:min(320px,85vw); height:100vh; background:#0A0A0A; border-left:1px solid rgba(200,150,12,0.2); z-index:250; transition:right 0.4s cubic-bezier(0.4,0,0.2,1); display:flex; flex-direction:column; padding:100px 40px 40px; gap:8px; }
+.drawer-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:240; opacity:0; pointer-events:none; transition:opacity 0.4s; }
+/* CSS toggle for drawer open state */
+#menuToggle:checked ~ .mobile-drawer { right:0; }
+#menuToggle:checked ~ .drawer-overlay { opacity:1; pointer-events:all; }
+.mobile-drawer a { display:block; font-family:'Arial Black',Arial,sans-serif; font-weight:800; font-size:28px; letter-spacing:2px; text-transform:uppercase; color:#BBBBBB; text-decoration:none; padding:12px 0; border-bottom:1px solid rgba(200,150,12,0.1); transition:color 0.3s,padding-left 0.3s; }
+.mobile-drawer a:hover,.mobile-drawer a:active { color:#C8960C; padding-left:8px; }
+.mobile-drawer a.drawer-cta { margin-top:20px; background:#C8960C; color:#000!important; padding:16px 24px!important; text-align:center; font-size:14px; letter-spacing:3px; border-bottom:none; }
+.drawer-close-label { position:absolute; top:24px; right:24px; background:none; border:1px solid rgba(200,150,12,0.3); color:#C8960C; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-size:18px; cursor:pointer; }
+.drawer-close-label:hover { background:rgba(200,150,12,0.1); }
+.mobile-drawer-socials { display:flex; gap:12px; margin-top:auto; padding-top:24px; border-top:1px solid rgba(200,150,12,0.1); }
+.mobile-drawer-socials a { width:40px; height:40px; border:1px solid rgba(200,150,12,0.3)!important; display:flex; align-items:center; justify-content:center; color:#777; font-size:11px; font-weight:700; text-decoration:none; padding:0!important; border-bottom:1px solid rgba(200,150,12,0.3)!important; transition:all 0.3s; }
+.mobile-drawer-socials a:hover { border-color:#C8960C!important; color:#C8960C; }
+@media(max-width:900px){
+  .hamburger { display:none!important; }
+  .hamburger-label { display:flex; }
+}
+
+
+
+
+
+/* Reveal — everything visible, simple fade in via CSS */
+
+
+
+.mobile-photo-ph {
+  display: none;
+  width: 100%;
+  background: #1A1A1A;
+  border: 1px dashed rgba(200,150,12,0.35);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  padding: 48px 20px;
+  margin: 0 0 24px 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+@media(max-width:900px) {
+  .mobile-photo-ph { display: flex !important; }
+}
+.mobile-ph-icon { font-size: 32px; opacity: 0.6; }
+.mobile-ph-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(200,150,12,0.6); line-height: 1.5; }
+.mobile-ph-size { font-size: 10px; color: #555; }
+
+
+
+
+
+
+
+
+/* ── TAGLINE TICKER ── */
+
+
+.tagline-track:hover { animation-play-state:paused; }
+
+
+
+  100% { transform: translateX(-50%); }
+}
+
+
+.tagline-strip{background:#C8960C;overflow:hidden;padding:10px 0;white-space:nowrap;border-bottom:1px solid rgba(0,0,0,.12)}
+.tagline-track{display:inline-block;animation:tickerGo 40s linear infinite;white-space:nowrap}
+.tagline-word{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:14px;letter-spacing:4px;text-transform:uppercase;color:#000;padding:0 32px;display:inline}
+.tagline-dot{width:5px;height:5px;background:rgba(0,0,0,.35);border-radius:50%;display:inline-block;vertical-align:middle;margin:0 4px}
+@keyframes tickerGo{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+
+/* ── FOOTER LAYOUT FIX ── */
+.site-footer { background:#111111; border-top:1px solid rgba(200,150,12,.12); padding:56px 60px 28px; }
+.footer-top { display:grid !important; grid-template-columns:1.5fr 1fr 1fr 1fr !important; gap:48px; margin-bottom:40px; }
+.footer-tagline { font-size:13px; color:#777; line-height:1.75; max-width:280px; margin-top:12px; }
+.footer-col h4 { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#C8960C; margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid rgba(200,150,12,.12); display:block; }
+.footer-col ul { list-style:none !important; display:flex; flex-direction:column; gap:9px; padding:0; }
+.footer-col ul li { list-style:none !important; }
+.footer-col ul a { font-size:13px; color:#777; text-decoration:none; }
+.footer-col ul a:hover { color:#C8960C; }
+.footer-col address { font-style:normal; font-size:13px; color:#777; line-height:1.8; }
+.footer-col address strong { color:#BBBBBB; font-weight:500; display:block; margin-bottom:2px; }
+.footer-col address a { color:#777; text-decoration:none; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,.06); padding-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+.footer-copy { font-size:12px; color:#555; }
+.footer-copy span { color:#C8960C; }
+.footer-socials { display:flex; gap:10px; }
+.footer-social-link { width:34px; height:34px; border:1px solid rgba(200,150,12,.2); display:flex; align-items:center; justify-content:center; color:#777; text-decoration:none; font-size:11px; font-weight:700; transition:all .3s; }
+.footer-social-link:hover { border-color:#C8960C; color:#C8960C; }
+@media(max-width:900px) {
+  .site-footer { padding:44px 24px 24px; }
+  .footer-top { grid-template-columns:1fr 1fr !important; gap:28px; }
+  .footer-bottom { flex-direction:column; text-align:center; }
+}
+@media(max-width:480px) {
+  .footer-top { grid-template-columns:1fr !important; }
+}
+
+
+
+
+
+/* PAGE LOAD ANIMATIONS */
+ to { opacity:1; transform:translateY(0); } }
+ to { opacity:1; transform:translateX(0); } }
+ to { opacity:1; transform:translateX(0); } }
+
+
+
+
+
+
+
+
+
+
+
+.service-card { animation: slideUp 0.6s both; }
+.service-card:nth-child(2) { animation-delay:.1s; }
+.service-card:nth-child(3) { animation-delay:.2s; }
+.service-card:nth-child(4) { animation-delay:.3s; }
+.service-card:nth-child(5) { animation-delay:.4s; }
+.service-card:nth-child(6) { animation-delay:.5s; }
+
+.stat-item  { animation: slideUp 0.5s both; }
+.stat-item:nth-child(2) { animation-delay:.1s; }
+.stat-item:nth-child(3) { animation-delay:.2s; }
+.stat-item:nth-child(4) { animation-delay:.3s; }
+
+.serve-card { animation: slideUp 0.6s both; }
+.serve-card:nth-child(2) { animation-delay:.1s; }
+.serve-card:nth-child(3) { animation-delay:.2s; }
+.serve-card:nth-child(4) { animation-delay:.3s; }
+.serve-card:nth-child(5) { animation-delay:.4s; }
+.serve-card:nth-child(6) { animation-delay:.5s; }
+
+.val-card  { animation: slideUp 0.6s both; }
+.val-card:nth-child(2) { animation-delay:.1s; }
+.val-card:nth-child(3) { animation-delay:.2s; }
+.val-card:nth-child(4) { animation-delay:.3s; }
+
+.cred-card { animation: slideUp 0.6s both; }
+.cred-card:nth-child(2) { animation-delay:.1s; }
+.cred-card:nth-child(3) { animation-delay:.2s; }
+.cred-card:nth-child(4) { animation-delay:.3s; }
+.cred-card:nth-child(5) { animation-delay:.4s; }
+.cred-card:nth-child(6) { animation-delay:.5s; }
+
+.testi-card { animation: slideUp 0.6s both; }
+.testi-card:nth-child(2) { animation-delay:.15s; }
+.testi-card:nth-child(3) { animation-delay:.3s; }
+
+.tl-entry { animation: slideLeft 0.6s both; }
+.tl-entry:nth-child(2) { animation-delay:.1s; }
+.tl-entry:nth-child(3) { animation-delay:.2s; }
+.tl-entry:nth-child(4) { animation-delay:.3s; }
+.tl-entry:nth-child(5) { animation-delay:.4s; }
+.tl-entry:nth-child(6) { animation-delay:.5s; }
+.tl-entry:nth-child(7) { animation-delay:.6s; }
+
+/* HOVER EFFECTS */
+.service-card:hover, .serve-card:hover, .val-card:hover,
+.cred-card:hover, .testi-card:hover, .price-card:hover,
+.booking-card:hover, .option-card:hover {
+  transform: translateY(-4px);
+  transition: transform .3s ease, border-color .3s ease, background .3s ease;
+}
+.btn-gold, .btn-ghost, .btn-submit, .btn-full {
+  transition: background .3s ease, transform .3s ease, color .3s ease;
+}
+.btn-gold:hover, .btn-ghost:hover, .btn-submit:hover { transform: translateY(-2px); }
+.nav-links a, .footer-social-link, .mobile-drawer a {
+  transition: color .3s ease, border-color .3s ease;
+}
+.prog-pill { transition: background .3s ease, color .3s ease, border-color .3s ease; }
+
+
+
+
+.reveal.visible,.reveal-left.visible,.reveal-right.visible {
+  opacity: 1;
+  transform: none;
+}
+/* Hover effects */
+.service-card,.serve-card,.val-card,.cred-card,.testi-card,.price-card,.booking-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+.service-card:hover,.serve-card:hover,.val-card:hover,.cred-card:hover,
+.testi-card:hover,.price-card:hover,.booking-card:hover {
+  transform: translateY(-4px);
+}
+.btn-gold,.btn-ghost { transition: background 0.3s ease, transform 0.3s ease; }
+.btn-gold:hover,.btn-ghost:hover { transform: translateY(-2px); }
+
+
+
+
+
+
+
+
+
+
+/* SCROLL REVEAL */
+
+
+
+
+
+
+
+
+
+
+.tk{background:#C8960C;overflow:hidden;padding:10px 0;white-space:nowrap;border-bottom:1px solid rgba(0,0,0,.12)}
+.tt{display:inline-block;animation:tka 40s linear infinite;white-space:nowrap}
+.tw{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:14px;letter-spacing:4px;text-transform:uppercase;color:#000;padding:0 30px;display:inline}
+.td{width:6px;height:6px;background:rgba(0,0,0,.4);border-radius:50%;display:inline-block;vertical-align:middle;margin:0 6px}
+@keyframes tka{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+
+/* REVEAL — visible by default, animate as enhancement */
+
+
+
+
+to{opacity:1;transform:none}}
+to{opacity:1;transform:none}}
+to{opacity:1;transform:none}}
+
+
+
+
+
+/* REVEAL */
+
+
+
+ to{opacity:1;transform:none} }
+ to{opacity:1;transform:none} }
+  to{opacity:1;transform:none} }
+
+
+/* Programmes mobile overflow fix */
+@media(max-width:900px){
+  .prog-header,.prog-section,.two-col,.pricing-section,.quote-callout,
+  .info-grid,.photo-strip,.cta-strip,.prog-nav{
+    padding-left:20px!important;padding-right:20px!important
   }
+  .prog-section{padding:60px 20px!important}
+  .two-col{grid-template-columns:1fr!important;gap:24px!important}
+  .info-grid{grid-template-columns:1fr 1fr!important}
+  .pricing-grid{grid-template-columns:1fr!important}
+  .photo-strip{grid-template-columns:1fr!important}
+  .prog-title{font-size:clamp(32px,8vw,56px)!important;letter-spacing:-1px!important}
+  .stit{font-size:18px!important}
+}
+
+
+@media(max-width:900px){
+  .prog-section,.two-col,.pricing-section,.quote-callout,.info-grid,.photo-strip,.cta-strip{padding-left:20px!important;padding-right:20px!important}
+  .prog-section{padding-top:50px!important;padding-bottom:50px!important}
+  .two-col{grid-template-columns:1fr!important;gap:20px!important}
+  .pricing-grid{grid-template-columns:1fr!important}
+  .photo-strip{grid-template-columns:1fr!important}
+  .prog-title{font-size:clamp(30px,7vw,52px)!important;letter-spacing:-1px!important}
+  .info-grid{grid-template-columns:1fr 1fr!important}
+}
+
+
+.jb{position:fixed;bottom:24px;right:20px;z-index:999;background:#C8960C;color:#000;width:48px;height:48px;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:22px;font-weight:900;text-decoration:none;box-shadow:0 4px 16px rgba(200,150,12,.5)}
+@media(max-width:900px){.jb{display:flex!important}}
+
+
+.book-now{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#C8960C;color:#000;font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 20px;text-decoration:none;width:100%;box-sizing:border-box;margin-top:12px;transition:background .3s ease}
+.book-now:hover{background:#E8B830}
+.book-now-ghost{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(200,150,12,.5);color:#C8960C;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:11px 20px;text-decoration:none;width:100%;box-sizing:border-box;margin-top:8px;transition:all .3s ease}
+.book-now-ghost:hover{background:rgba(200,150,12,.08);border-color:#C8960C}
+
+
+.rv.an  { animation: rvUp   0.65s ease both }
+.rl.an  { animation: rvLeft 0.65s ease both }
+.rr.an  { animation: rvRight 0.65s ease both }
+@keyframes rvUp    { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none} }
+@keyframes rvLeft  { from{opacity:0;transform:translateX(-24px)} to{opacity:1;transform:none} }
+@keyframes rvRight { from{opacity:0;transform:translateX(24px)}  to{opacity:1;transform:none} }
+
+
+@media(max-width:900px){
+  
+@media(max-width:900px){
+  body,html{overflow-x:hidden!important;max-width:100vw!important}
+  .prog-nav,.prog-section,.two-col,.pricing-section,.quote-callout,
+  .info-grid,.photo-strip,.cta-strip,.prog-header,.programme{
+    padding-left:16px!important;padding-right:16px!important;
+    max-width:100%!important;overflow-x:hidden!important
+  }
+  .prog-title{font-size:clamp(28px,6vw,44px)!important;letter-spacing:0!important}
+  .two-col{grid-template-columns:1fr!important}
+  .info-grid{grid-template-columns:1fr!important}
+  .pricing-grid{grid-template-columns:1fr!important}
+  .photo-strip{grid-template-columns:1fr!important}
+  .photo-ph{min-height:200px!important}
+  table,th,td{font-size:13px!important}
+  .price-card{padding:24px 16px!important}
+}
+
+
+/* Ensure no teal/green background bleeds through */
+html, body {
+  background:#080808!important;
+  min-height:100%;
+}
+
+
+
+  .dr { z-index:9997!important; }
+  .ov { z-index:9996!important; }
+  /* Mobile body overflow */
+  body, html { overflow-x:hidden!important; max-width:100vw!important; }
+  /* Fix all sections to not overflow */
+  * { max-width:100%!important; }
+  img:not([style*="height:90px"]):not([style*="height:48px"]) {
+    max-width:100%!important;
+    height:auto!important;
+  }
+}
+
+
+@media(max-width:900px){
+  .prog-nav{
+    overflow-x:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+    flex-wrap:nowrap!important;
+    padding:12px 16px!important;
+    gap:8px!important;
+  }
+  .prog-pill{
+    white-space:nowrap!important;
+    flex-shrink:0!important;
+    font-size:10px!important;
+    padding:8px 14px!important;
+  }
+  .prog-section, .prog-header{
+    padding:50px 16px!important;
+  }
+  .info-grid{
+    grid-template-columns:1fr!important;
+    padding:0!important;
+  }
+  .two-col{
+    grid-template-columns:1fr!important;
+    padding:0!important;
+  }
+  .pricing-grid{
+    grid-template-columns:1fr!important;
+  }
+  .photo-strip{
+    grid-template-columns:1fr!important;
+  }
+  .quote-callout{
+    padding:24px 16px!important;
+  }
+  .cta-strip{
+    flex-direction:column!important;
+    padding:40px 16px!important;
+    gap:16px!important;
+  }
+  .prog-title{
+    font-size:clamp(26px,6vw,40px)!important;
+    word-break:break-word!important;
+  }
+}
+
 </style>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/programmes-fix.css">
 </head>
 <body>
-
+<input type="checkbox" id="mt">
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#"><span>NUEVO</span> ASCEND</a>
+  <a href="index.html" style="display:flex;align-items:center;text-decoration:none"><img src="assets/images/20ba2a_a200ff1506684226ab8cf4f909ba07a0~mv2.png" alt="Nuevo Ascend" style="height:90px;width:auto;object-fit:contain;display:block"></a>
   <ul class="nav-links">
-    <li><a href="#coaching">Coaching</a></li>
-    <li><a href="#workshops">Workshops</a></li>
-    <li><a href="#consultancy">Consultancy</a></li>
-    <li><a href="#young-leaders">Young Leaders</a></li>
-    <li><a href="#speaking">Speaking</a></li>
-    <li><a href="#contact" class="nav-cta">Book a Call</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="programmes.html">Programmes</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Book a Call</a></li>
   </ul>
+  <label for="mt" class="hl" aria-label="Open menu"><span></span><span></span><span></span></label>
 </nav>
+<div class="ov"><label for="mt" style="position:absolute;inset:0;cursor:pointer" aria-label="Close menu"></label></div>
+<div class="dr">
+  <label for="mt" class="dcl" aria-label="Close menu">&#x2715;</label>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="programmes.html">Programmes</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="dc">Book a Call</a>
+  <div class="ds">
+    <a href="https://www.facebook.com/share/14gD8bDvkio/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">fb</a>
+    <a href="https://www.linkedin.com/company/nuevo-ascend/" target="_blank" rel="noopener noreferrer">in</a>
+    <a href="https://www.instagram.com/nuevoascend" target="_blank" rel="noopener noreferrer">ig</a>
+  </div>
+</div>
+<div class="tk" aria-hidden="true">
+  <div class="tt"><span class="tw">Lead</span><span class="td"></span><span class="tw">Elevate</span><span class="td"></span><span class="tw">Empower</span><span class="td"></span><span class="tw">Ascend</span><span class="td"></span><span class="tw">Lead</span><span class="td"></span><span class="tw">Elevate</span><span class="td"></span><span class="tw">Empower</span><span class="td"></span><span class="tw">Ascend</span><span class="td"></span><span class="tw">Lead</span><span class="td"></span><span class="tw">Elevate</span><span class="td"></span><span class="tw">Empower</span><span class="td"></span><span class="tw">Ascend</span><span class="td"></span><span class="tw">Lead</span><span class="td"></span><span class="tw">Elevate</span><span class="td"></span><span class="tw">Empower</span><span class="td"></span><span class="tw">Ascend</span><span class="td"></span></div>
+</div>
+<!-- TAGLINE TICKER -->
+<div class="tagline-strip" aria-hidden="true">
+  <div class="tagline-track"><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span></div>
+</div>
+
+<div class="sp-strip an" data-podcast id="podcast">
+  <div class="sp-lb">
+    <div class="sp-ic" aria-hidden="true">&#9835;</div>
+    <div><div class="sp-lt">Listen Now</div><div class="sp-ls">Podcast Episode</div></div>
+  </div>
+  <div class="sp-main">
+    <button type="button" class="sp-card" data-sp-play aria-expanded="false" aria-controls="sp-player">
+      <span class="sp-play" aria-hidden="true">&#9654;</span>
+      <span class="sp-meta">
+        <span class="sp-title">How I Crushed It</span>
+        <span class="sp-sub">Leon Francis &middot; Tap play to listen here</span>
+      </span>
+      <span class="sp-btn">Play &#x2192;</span>
+    </button>
+    <div class="sp-embed" data-sp-player aria-label="Spotify player"></div>
+    <a class="sp-link" href="https://open.spotify.com/episode/6nXYAmq9eBohDM4sr0WTos" target="_blank" rel="noopener noreferrer">Open in Spotify</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -861,6 +1511,15 @@
   <a href="#speaking"      class="prog-pill">05 — Speaking</a>
 </div>
 
+<aside class="prog-jump" aria-label="Jump to programme section">
+  <span class="prog-jump-title">Sections</span>
+  <a href="#coaching" data-jump="coaching" title="1:1 Coaching"><span class="prog-jump-num">01</span><span class="prog-jump-lbl">Coaching</span></a>
+  <a href="#workshops" data-jump="workshops" title="Workshops"><span class="prog-jump-num">02</span><span class="prog-jump-lbl">Workshops</span></a>
+  <a href="#consultancy" data-jump="consultancy" title="Consultancy"><span class="prog-jump-num">03</span><span class="prog-jump-lbl">Consultancy</span></a>
+  <a href="#young-leaders" data-jump="young-leaders" title="Young Leaders"><span class="prog-jump-num">04</span><span class="prog-jump-lbl">Young Leaders</span></a>
+  <a href="#speaking" data-jump="speaking" title="Speaking"><span class="prog-jump-num">05</span><span class="prog-jump-lbl">Speaking</span></a>
+</aside>
+
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- PROGRAMME 01 — 1:1 LEADERSHIP COACHING -->
 <!-- ═══════════════════════════════════════════════════════════ -->
@@ -878,22 +1537,22 @@
       </div>
       <div>
         <div class="info-grid">
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">👤</span>
             <span class="info-card-label">Format</span>
             <span class="info-card-value">1:1 Sessions<br>via Zoom or In-Person</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">📅</span>
             <span class="info-card-label">Duration</span>
             <span class="info-card-value">Single Session to 8-Week Programme</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">⏱</span>
             <span class="info-card-label">Session Length</span>
             <span class="info-card-value">60–90 Minutes per Session</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">🎯</span>
             <span class="info-card-label">Start</span>
             <span class="info-card-value">Rolling Intake — Start Anytime</span>
@@ -930,56 +1589,26 @@
       </div>
     </div>
 
-    <!-- PHOTO STRIP — Coaching -->
-    <div class="photo-caption-bar reveal"><span>Programme Photos — Replace with your own images</span></div>
-    <div class="photo-strip cols-2-1 reveal">
-      <div class="photo-ph tall">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">1:1 Coaching Session<br>In-Person or Zoom</div>
-          <div class="photo-ph-size">Recommended: 800×900px</div>
-        </div>
-      </div>
-      <div class="photo-ph square">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Leon Francis<br>Founder & Coach</div>
-          <div class="photo-ph-size">Recommended: 600×600px</div>
-        </div>
-      </div>
-    </div>
+            <!-- PHOTO STRIP — Coaching -->
     <div class="photo-strip cols-3 reveal">
       <div class="photo-ph">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Coaching Environment</div>
-          <div class="photo-ph-size">800×530px</div>
-        </div>
+        <img src="assets/images/20ba2a_5686d32a1af047969db529c2bd1d4e23~mv2.jpg" alt="Leon in a one-to-one coaching conversation">
       </div>
       <div class="photo-ph">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Client Breakthrough Moment</div>
-          <div class="photo-ph-size">800×530px</div>
-        </div>
+        <img src="assets/images/20ba2a_354a94178ba74dcfac2551954bf020b5~mv2.png" alt="Leon with a coaching client">
       </div>
       <div class="photo-ph">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Goal Setting & Planning</div>
-          <div class="photo-ph-size">800×530px</div>
-        </div>
+        <img src="assets/images/20ba2a_bbbf7437ff98476196eaa6b762870edc~mv2.png" alt="Leon in a focused coaching discussion">
       </div>
     </div>
-
-    <div class="quote-callout reveal">
+<div class="quote-callout reveal">
       <p>"I was a manager at 16. No mentor. No roadmap. I figured it out — and spent the next 20 years building the playbook I wish I'd had. That is what I bring to every coaching session."</p>
     </div>
 
     <div class="pricing-section reveal">
       <h3>Investment</h3>
       <div class="pricing-grid">
-        <div class="price-card">
+        <div class="price-card rv">
           <span class="price-name">Introductory</span>
           <span class="price-amount">£99</span>
           <span class="price-period">Single Session</span>
@@ -989,8 +1618,10 @@
             <li>Action plan summary</li>
             <li>No commitment required</li>
           </ul>
+          <a href="https://wix.to/d6BvWEy" target="_blank" rel="noopener noreferrer" class="book-now">Book Intro Session &#x2192;</a>
+          <a href="https://wix.to/d6BvWEy" target="_blank" rel="noopener noreferrer" class="book-now">Book Now &#x2192;</a>
         </div>
-        <div class="price-card featured">
+        <div class="price-card featured rv">
           <span class="price-name">Foundation</span>
           <span class="price-amount">£399</span>
           <span class="price-period">4-Week Programme</span>
@@ -1001,8 +1632,9 @@
             <li>WhatsApp check-in support</li>
             <li>End-of-programme review</li>
           </ul>
+          <a href="https://wix.to/H2Xa8F6" target="_blank" rel="noopener noreferrer" class="book-now">Book 4-Week Programme &#x2192;</a>
         </div>
-        <div class="price-card">
+        <div class="price-card rv">
           <span class="price-name">Transformation</span>
           <span class="price-amount">£699</span>
           <span class="price-period">8-Week Programme</span>
@@ -1014,6 +1646,7 @@
             <li>Resources & toolkit library</li>
             <li>Final review & 90-day roadmap</li>
           </ul>
+          <a href="https://wix.to/hTsR8cG" target="_blank" rel="noopener noreferrer" class="book-now">Book 8-Week Programme &#x2192;</a>
         </div>
       </div>
     </div>
@@ -1023,7 +1656,7 @@
         <h4>Ready to invest in your leadership?</h4>
         <p>Book a free 20-minute discovery call to find the right programme for you.</p>
       </div>
-      <a href="#contact" class="btn-gold">Book Discovery Call</a>
+      <a href="contact.html" class="btn-gold">Book Discovery Call</a>
     </div>
   </div>
 </section>
@@ -1047,22 +1680,22 @@
       </div>
       <div>
         <div class="info-grid">
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">🏢</span>
             <span class="info-card-label">Format</span>
             <span class="info-card-value">In-Person or Virtual</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">⏱</span>
             <span class="info-card-label">Duration</span>
             <span class="info-card-value">Half Day or Full Day</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">👥</span>
             <span class="info-card-label">Group Size</span>
             <span class="info-card-value">Up to 30 Participants</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">🗓</span>
             <span class="info-card-label">Booking</span>
             <span class="info-card-value">Flexible Scheduling Available</span>
@@ -1121,52 +1754,22 @@
       </div>
     </div>
 
-    <!-- PHOTO STRIP — Workshops -->
-    <div class="photo-caption-bar reveal"><span>Workshop Photos — Replace with your own images</span></div>
+            <!-- PHOTO STRIP — Workshops -->
     <div class="photo-strip cols-3 reveal">
-      <div class="photo-ph wide" style="">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Workshop in Action<br>Full Room Engagement</div>
-          <div class="photo-ph-size">900×420px</div>
-        </div>
-      </div>
-      <div class="photo-ph wide">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Leon Facilitating<br>Corporate Group</div>
-          <div class="photo-ph-size">900×420px</div>
-        </div>
-      </div>
-      <div class="photo-ph wide">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Team Breakout<br>Activity</div>
-          <div class="photo-ph-size">900×420px</div>
-        </div>
-      </div>
-    </div>
-    <div class="photo-strip cols-2-1 reveal">
       <div class="photo-ph">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Participant Discussion &amp; Collaboration</div>
-          <div class="photo-ph-size">Recommended: 900×530px</div>
-        </div>
+        <img src="assets/images/20ba2a_ddfc395814874009bb0c52de098eab41~mv2.jpg" alt="Leon presenting a workshop to a full room">
       </div>
       <div class="photo-ph">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Post-Workshop<br>Feedback</div>
-          <div class="photo-ph-size">Recommended: 600×530px</div>
-        </div>
+        <img src="assets/images/20ba2a_6651ac799ad7456a96780318dcd0270e~mv2.png" alt="Leon facilitating a corporate workshop session">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_7026c7622e824fa69869470ebafa9ba7~mv2.png" alt="Leon leading a corporate leadership workshop">
       </div>
     </div>
-
-    <div class="pricing-section reveal">
+<div class="pricing-section reveal">
       <h3>Investment</h3>
       <div class="pricing-grid">
-        <div class="price-card">
+        <div class="price-card rv">
           <span class="price-name">Half Day</span>
           <span class="price-amount">£500</span>
           <span class="price-period">3–4 Hours / Up to 20 people</span>
@@ -1176,8 +1779,9 @@
             <li>Pre-workshop call</li>
             <li>Action plan summary</li>
           </ul>
+          <a href="https://wix.to/MUEiOR5" target="_blank" rel="noopener noreferrer" class="book-now">Book Half Day &#x2192;</a>
         </div>
-        <div class="price-card featured">
+        <div class="price-card featured rv">
           <span class="price-name">Full Day</span>
           <span class="price-amount">£1,500</span>
           <span class="price-period">6–7 Hours / Up to 30 people</span>
@@ -1188,8 +1792,9 @@
             <li>Post-workshop report</li>
             <li>Follow-up recommendations</li>
           </ul>
+          <a href="https://wix.to/JQytQPx" target="_blank" rel="noopener noreferrer" class="book-now">Book Full Day &#x2192;</a>
         </div>
-        <div class="price-card">
+        <div class="price-card rv">
           <span class="price-name">Workshop Series</span>
           <span class="price-amount">POA</span>
           <span class="price-period">Multi-Session Programme</span>
@@ -1200,6 +1805,7 @@
             <li>Progress tracking included</li>
             <li>Bespoke to your organisation</li>
           </ul>
+          <a href="https://wix.to/FQj8gBx" target="_blank" rel="noopener noreferrer" class="book-now">Enquire Now &#x2192;</a>
         </div>
       </div>
     </div>
@@ -1209,7 +1815,7 @@
         <h4>Invest in your managers. Watch your teams transform.</h4>
         <p>Contact us to discuss a bespoke workshop programme for your organisation.</p>
       </div>
-      <a href="#contact" class="btn-gold">Get a Quote</a>
+      <a href="contact.html" class="btn-gold">Get a Quote</a>
     </div>
   </div>
 </section>
@@ -1233,22 +1839,22 @@
       </div>
       <div>
         <div class="info-grid">
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">🏛</span>
             <span class="info-card-label">Format</span>
             <span class="info-card-value">Retainer or Project Basis</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">📋</span>
             <span class="info-card-label">Engagement</span>
             <span class="info-card-value">1 Month to 12+ Months</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">🤝</span>
             <span class="info-card-label">Delivery</span>
             <span class="info-card-value">On-Site, Remote or Hybrid</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">📊</span>
             <span class="info-card-label">Sectors</span>
             <span class="info-card-value">Retail, Tech, Services & More</span>
@@ -1289,59 +1895,22 @@
       <p>"The gap between the leadership culture a business thinks it has and the one it actually has is where most performance problems live. That gap is exactly where I work."</p>
     </div>
 
-    <!-- PHOTO STRIP — Consultancy -->
-    <div class="photo-caption-bar reveal"><span>Consultancy Photos — Replace with your own images</span></div>
-    <div class="photo-strip cols-1-2 reveal">
-      <div class="photo-ph tall">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Strategic Advisory<br>Meeting</div>
-          <div class="photo-ph-size">600×750px</div>
-        </div>
+            <!-- PHOTO STRIP — Consultancy -->
+    <div class="photo-strip cols-3 reveal">
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_b77a17a1a660482785e178a304e73110~mv2.png" alt="Strategic Advisory Meeting">
       </div>
       <div class="photo-ph">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Boardroom / Leadership Culture Session</div>
-          <div class="photo-ph-size">900×530px</div>
-        </div>
+        <img src="assets/images/20ba2a_7603e4ab1f7d4dcf97a0f0805f00e81e~mv2.jpg" alt="Boardroom / Leadership Session">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_f974fa1e1ae2471e8ace9ef4bb758336~mv2.png" alt="Culture Audit in Progress">
       </div>
     </div>
-    <div class="photo-strip cols-4 reveal">
-      <div class="photo-ph square">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Culture Audit</div>
-          <div class="photo-ph-size">500×500px</div>
-        </div>
-      </div>
-      <div class="photo-ph square">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Strategy Session</div>
-          <div class="photo-ph-size">500×500px</div>
-        </div>
-      </div>
-      <div class="photo-ph square">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">DEI Programme</div>
-          <div class="photo-ph-size">500×500px</div>
-        </div>
-      </div>
-      <div class="photo-ph square">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Results Review</div>
-          <div class="photo-ph-size">500×500px</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pricing-section reveal">
+<div class="pricing-section reveal">
       <h3>Investment</h3>
       <div class="pricing-grid">
-        <div class="price-card">
+        <div class="price-card rv">
           <span class="price-name">Project</span>
           <span class="price-amount">POA</span>
           <span class="price-period">Defined scope & deliverables</span>
@@ -1351,8 +1920,9 @@
             <li>Tailored to project need</li>
             <li>Day rate from £600</li>
           </ul>
+          <a href="https://wix.to/rXAmKPa" target="_blank" rel="noopener noreferrer" class="book-now">Enquire Now &#x2192;</a>
         </div>
-        <div class="price-card featured">
+        <div class="price-card featured rv">
           <span class="price-name">Monthly Retainer</span>
           <span class="price-amount">£1,000</span>
           <span class="price-period">Per month — SME / Start-up</span>
@@ -1362,8 +1932,10 @@
             <li>Priority workshop booking</li>
             <li>Quarterly strategy review</li>
           </ul>
+          <a href="https://wix.to/6bIgGqj" target="_blank" rel="noopener noreferrer" class="book-now">Book Core &#x2192;</a>
+          <a href="https://wix.to/zNJtkyM" target="_blank" rel="noopener noreferrer" class="book-now">Book Retainer &#x2192;</a>
         </div>
-        <div class="price-card">
+        <div class="price-card rv">
           <span class="price-name">Premium Retainer</span>
           <span class="price-amount">£5,000</span>
           <span class="price-period">Per month — Corporate</span>
@@ -1383,7 +1955,7 @@
         <h4>Let's talk about your organisation.</h4>
         <p>Every engagement starts with a no-obligation discovery conversation.</p>
       </div>
-      <a href="#contact" class="btn-gold">Start the Conversation</a>
+      <a href="contact.html" class="btn-gold">Start the Conversation</a>
     </div>
   </div>
 </section>
@@ -1407,22 +1979,22 @@
       </div>
       <div>
         <div class="info-grid">
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">🎓</span>
             <span class="info-card-label">Age Range</span>
             <span class="info-card-value">16–25 Years Old</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">📍</span>
             <span class="info-card-label">Delivery</span>
             <span class="info-card-value">In-Person, Virtual or Hybrid</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">⏱</span>
             <span class="info-card-label">Duration</span>
             <span class="info-card-value">4–12 Week Programmes</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">💷</span>
             <span class="info-card-label">Funding</span>
             <span class="info-card-value">Grant Options Available</span>
@@ -1487,52 +2059,22 @@
       <p>"I was a 16-year-old Black boy leading a team of adults. Nobody gave me a manual. This programme is the manual I wish I had — now given to every young person who deserves it."</p>
     </div>
 
-    <!-- PHOTO STRIP — Young Leaders -->
-    <div class="photo-caption-bar reveal"><span>Young Leaders Programme Photos — Replace with your own images</span></div>
+            <!-- PHOTO STRIP — Young Leaders -->
     <div class="photo-strip cols-3 reveal">
-      <div class="photo-ph tall">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Leon with Young<br>Programme Participants</div>
-          <div class="photo-ph-size">700×820px</div>
-        </div>
-      </div>
-      <div class="photo-ph tall">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Group Coaching<br>Session — School or College</div>
-          <div class="photo-ph-size">700×820px</div>
-        </div>
-      </div>
-      <div class="photo-ph tall">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Certificate<br>Award Moment</div>
-          <div class="photo-ph-size">700×820px</div>
-        </div>
-      </div>
-    </div>
-    <div class="photo-strip cols-2-1 reveal">
       <div class="photo-ph">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Young Leaders in Action — Team Activity or Presentation</div>
-          <div class="photo-ph-size">900×530px</div>
-        </div>
+        <img src="assets/images/20ba2a_d5cb000da7e042a48d6bc4ee6d237e53~mv2.png" alt="Leon with Young Programme Participants">
       </div>
       <div class="photo-ph">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Mentoring<br>1:1 Moment</div>
-          <div class="photo-ph-size">600×530px</div>
-        </div>
+        <img src="assets/images/20ba2a_d244f3910aa24029942791fc493b2b50~mv2.jpg" alt="Group Coaching Session">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_ddfc395814874009bb0c52de098eab41~mv2.jpg" alt="Young leaders workshop in session">
       </div>
     </div>
-
-    <div class="pricing-section reveal">
+<div class="pricing-section reveal">
       <h3>Investment</h3>
       <div class="pricing-grid">
-        <div class="price-card">
+        <div class="price-card rv">
           <span class="price-name">Taster Session</span>
           <span class="price-amount">£250</span>
           <span class="price-period">Single 2-hour session</span>
@@ -1542,8 +2084,10 @@
             <li>Ideal for taster events</li>
             <li>Q&A included</li>
           </ul>
+          <a href="https://wix.to/N5S5Iqi" target="_blank" rel="noopener noreferrer" class="book-now">Book Panel &#x2192;</a>
+          <a href="https://wix.to/saWh3Tu" target="_blank" rel="noopener noreferrer" class="book-now">Book Taster &#x2192;</a>
         </div>
-        <div class="price-card featured">
+        <div class="price-card featured rv">
           <span class="price-name">Core Programme</span>
           <span class="price-amount">£1,000</span>
           <span class="price-period">4-week / 4 sessions</span>
@@ -1555,7 +2099,7 @@
             <li>Up to 20 participants</li>
           </ul>
         </div>
-        <div class="price-card">
+        <div class="price-card rv">
           <span class="price-name">Full Programme</span>
           <span class="price-amount">£1,500</span>
           <span class="price-period">8–12 weeks</span>
@@ -1566,6 +2110,8 @@
             <li>Network access ongoing</li>
             <li>Grant funding eligible</li>
           </ul>
+          <a href="https://wix.to/Akd3IE4" target="_blank" rel="noopener noreferrer" class="book-now">Book Keynote &#x2192;</a>
+          <a href="https://wix.to/Mtwl4Fu" target="_blank" rel="noopener noreferrer" class="book-now">Book Full &#x2192;</a>
         </div>
       </div>
     </div>
@@ -1575,7 +2121,7 @@
         <h4>Bring the Young Leaders Programme to your organisation.</h4>
         <p>Grant and funded delivery options available. Let's talk.</p>
       </div>
-      <a href="#contact" class="btn-gold">Enquire Now</a>
+      <a href="contact.html" class="btn-gold">Enquire Now</a>
     </div>
   </div>
 </section>
@@ -1599,22 +2145,22 @@
       </div>
       <div>
         <div class="info-grid">
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">🎤</span>
             <span class="info-card-label">Format</span>
             <span class="info-card-value">Keynote, Panel or Workshop</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">⏱</span>
             <span class="info-card-label">Duration</span>
             <span class="info-card-value">20 mins to Full Day</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">📍</span>
             <span class="info-card-label">Location</span>
             <span class="info-card-value">UK-Wide & International</span>
           </div>
-          <div class="info-card">
+          <div class="info-card rv">
             <span class="info-card-icon">👥</span>
             <span class="info-card-label">Audience</span>
             <span class="info-card-value">20 to 2,000+ Attendees</span>
@@ -1674,85 +2220,25 @@
     </div>
 
     <div class="quote-callout reveal">
-      <p>"People don't remember slides. They remember stories. And this story — from a paper round at dawn to a stage with Tim Cook — is one they won't forget."</p>
+      <p>"People don't remember slides. They remember stories. And this story — from a paper boy at dawn to a stage with Tim Cook — is one they won't forget."</p>
     </div>
 
-    <!-- PHOTO STRIP — Speaking -->
-    <div class="photo-caption-bar reveal"><span>Speaking Photos — Replace with your own images</span></div>
-    <div class="photo-strip cols-2-1 reveal">
-      <div class="photo-ph" style="">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Leon on Stage — Keynote or Conference</div>
-          <div class="photo-ph-size">Recommended: 1200×700px — Hero speaking shot</div>
-        </div>
-      </div>
-      <div class="photo-ph tall">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Speaker<br>Portrait Shot</div>
-          <div class="photo-ph-size">600×750px</div>
-        </div>
-      </div>
-    </div>
+            <!-- PHOTO STRIP — Speaking -->
     <div class="photo-strip cols-3 reveal">
       <div class="photo-ph">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Audience<br>Engagement</div>
-          <div class="photo-ph-size">800×530px</div>
-        </div>
+        <img src="assets/images/20ba2a_7603e4ab1f7d4dcf97a0f0805f00e81e~mv2.jpg" alt="Leon speaking at London Metropolitan and London South Bank University">
       </div>
       <div class="photo-ph">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Panel Discussion<br>or Q&amp;A</div>
-          <div class="photo-ph-size">800×530px</div>
-        </div>
+        <img src="assets/images/20ba2a_f974fa1e1ae2471e8ace9ef4bb758336~mv2.png" alt="Leon delivering a keynote to a large audience">
       </div>
       <div class="photo-ph">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Post-Talk<br>Networking</div>
-          <div class="photo-ph-size">800×530px</div>
-        </div>
+        <img src="assets/images/20ba2a_d5cb000da7e042a48d6bc4ee6d237e53~mv2.png" alt="Leon with participants after a speaking engagement">
       </div>
     </div>
-    <div class="photo-strip cols-4 reveal">
-      <div class="photo-ph square">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">BBBA<br>2024</div>
-          <div class="photo-ph-size">500×500px</div>
-        </div>
-      </div>
-      <div class="photo-ph square">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">University<br>Talk</div>
-          <div class="photo-ph-size">500×500px</div>
-        </div>
-      </div>
-      <div class="photo-ph square">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Corporate<br>Event</div>
-          <div class="photo-ph-size">500×500px</div>
-        </div>
-      </div>
-      <div class="photo-ph square">
-        <div class="photo-ph-inner">
-          <div class="photo-ph-icon">📷</div>
-          <div class="photo-ph-label">Press &amp;<br>Media</div>
-          <div class="photo-ph-size">500×500px</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="pricing-section reveal">
+<div class="pricing-section reveal">
       <h3>Investment</h3>
       <div class="pricing-grid">
-        <div class="price-card">
+        <div class="price-card rv">
           <span class="price-name">Panel / Short Talk</span>
           <span class="price-amount">£250</span>
           <span class="price-period">Up to 30 minutes</span>
@@ -1763,7 +2249,7 @@
             <li>Speaker bio & headshot</li>
           </ul>
         </div>
-        <div class="price-card featured">
+        <div class="price-card featured rv">
           <span class="price-name">Keynote</span>
           <span class="price-amount">£1,500</span>
           <span class="price-period">45–60 minutes</span>
@@ -1775,7 +2261,7 @@
             <li>Expenses included (UK)</li>
           </ul>
         </div>
-        <div class="price-card">
+        <div class="price-card rv">
           <span class="price-name">Conference / Summit</span>
           <span class="price-amount">£2,500+</span>
           <span class="price-period">Half or full day</span>
@@ -1795,7 +2281,7 @@
         <h4>Book a speaker your audience will remember.</h4>
         <p>Get in touch to check availability and discuss your event.</p>
       </div>
-      <a href="#contact" class="btn-gold">Check Availability</a>
+      <a href="contact.html" class="btn-gold">Check Availability</a>
     </div>
   </div>
 </section>
@@ -1806,69 +2292,121 @@
   <h2>Ready to <span>Ascend?</span></h2>
   <p>Every engagement starts with a conversation. Book a free 20-minute discovery call and let's talk about what you need.</p>
   <div class="btn-group">
-    <a href="mailto:hello@nuevoascend.co.uk" class="btn-gold">Book a Discovery Call</a>
-    <a href="mailto:hello@nuevoascend.co.uk" class="btn-outline">hello@nuevoascend.co.uk</a>
+    <a href="mailto:contact@nuevoascend.com" class="btn-gold">Book a Discovery Call</a>
+    <a href="mailto:contact@nuevoascend.com" class="btn-outline">contact@nuevoascend.com</a>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="logo"><span>NUEVO</span> ASCEND</div>
-  <p>Part of the Nuevo Group &nbsp;|&nbsp; London, UK &nbsp;|&nbsp; nuevoascend.co.uk</p>
-  <ul class="footer-links">
-    <li><a href="#coaching">Coaching</a></li>
-    <li><a href="#workshops">Workshops</a></li>
-    <li><a href="#consultancy">Consultancy</a></li>
-    <li><a href="#young-leaders">Young Leaders</a></li>
-    <li><a href="#speaking">Speaking</a></li>
-  </ul>
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <a href="index.html" style="display:inline-block;margin-bottom:16px;text-decoration:none"><img src="assets/images/20ba2a_a200ff1506684226ab8cf4f909ba07a0~mv2.png" alt="Nuevo Ascend" style="height:56px;width:auto;object-fit:contain;display:block"></a>
+      <p class="footer-tagline">Leadership Development &amp; Consultancy. Part of the Nuevo Group. Helping individuals rise and organisations build leadership cultures that work.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Programmes</h4>
+      <ul>
+        <li><a href="programmes.html#coaching">1:1 Coaching</a></li>
+        <li><a href="programmes.html#workshops">Workshops</a></li>
+        <li><a href="programmes.html#consultancy">Consultancy</a></li>
+        <li><a href="programmes.html#young-leaders">Young Leaders</a></li>
+        <li><a href="programmes.html#speaking">Speaking</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#story">Founder Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Book a Call</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <address>
+        <strong>Email</strong>
+        <a href="mailto:contact@nuevoascend.com">contact@nuevoascend.com</a>
+        <strong style="margin-top:12px">Phone</strong>
+        <a href="tel:08000025557">0800 002 5557</a>
+        <strong style="margin-top:12px">Address</strong>
+        Office 190, 182-184 High Street North<br>East Ham, London E6 2JA
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 <span>Nuevo Ascend Ltd</span> &mdash; Part of the Nuevo Group. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/share/14gD8bDvkio/?mibextid=wwXIfr" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">fb</a>
+      <a href="https://www.linkedin.com/company/nuevo-ascend/" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">in</a>
+      <a href="https://www.instagram.com/nuevoascend" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">ig</a>
+    </div>
+  </div>
 </footer>
 
-<script>
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
 
-  // Active nav pill on scroll
-  const sections = document.querySelectorAll('.programme');
-  const pills = document.querySelectorAll('.prog-pill');
-  const scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        pills.forEach(p => p.classList.remove('active'));
-        const id = entry.target.getAttribute('id');
-        const active = document.querySelector(`.prog-pill[href="#${id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { threshold: 0.4 });
-  sections.forEach(s => scrollObserver.observe(s));
-</script>
+
+
+
+
+
 
 
 <script>
-  // Auto-resize iFrame for Wix embed — posts content height to parent
-  function notifyHeight() {
-    const h = document.documentElement.scrollHeight;
-    window.parent.postMessage({ type: 'iwResizeWindow', params: { width: '100%', height: h + 'px' } }, '*');
+(function(){
+  var d=document,w=window,els,i,b,done=false;
+  function check(){
+    els=d.querySelectorAll('.rv,.rl,.rr');
+    var h=w.innerHeight||d.documentElement.clientHeight||800;
+    var all=true;
+    for(i=0;i<els.length;i++){
+      if(!els[i].classList.contains('an')){
+        b=els[i].getBoundingClientRect();
+        if(b.top<h-40){ els[i].classList.add('an'); }
+        else{ all=false; }
+      }
+    }
+    if(all&&done){ clearInterval(t); }
   }
-  // Fire on load and whenever content changes
-  window.addEventListener('load', notifyHeight);
-  window.addEventListener('resize', notifyHeight);
-  // Also fire after images and fonts load
-  setTimeout(notifyHeight, 500);
-  setTimeout(notifyHeight, 1500);
-  // MutationObserver catches dynamic content changes
-  new MutationObserver(notifyHeight).observe(document.body, { subtree: true, childList: true, attributes: true });
+  var t=setInterval(check,120);
+  setTimeout(function(){ done=true; },15000);
+  d.addEventListener('scroll',check,{passive:true});
+  w.addEventListener('scroll',check,{passive:true});
+  check();
+})();
 </script>
-
+<a class="jump-btn" href="#" aria-label="Back to top" title="Back to top">&#8679;</a>
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv,.rl,.rr'),i,b,done=false;
+  function check(){
+    var h=window.innerHeight||document.documentElement.clientHeight||800;
+    for(i=0;i<els.length;i++){
+      if(!els[i].classList.contains('an')){
+        b=els[i].getBoundingClientRect();
+        if(b.top<h-40){els[i].classList.add('an');}
+      }
+    }
+  }
+  var t=setInterval(check,120);
+  setTimeout(function(){done=true;clearInterval(t);},15000);
+  document.addEventListener('scroll',check,{passive:true});
+  window.addEventListener('scroll',check,{passive:true});
+  check();
+  setTimeout(check,500);
+  setTimeout(check,1200);
+})();
+</script>
+<script src="js/site.js"></script>
 </body>
 </html>

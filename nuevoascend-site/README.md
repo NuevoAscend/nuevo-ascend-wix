@@ -10,8 +10,14 @@ Part of the Nuevo Group | London, UK
 - `programmes.html` — All 5 Programmes
 - `contact.html` — Contact & Booking
 
+## Assets
+
+- `css/` — Stylesheets
+- `js/` — Site scripts
+- `assets/images/` — Image assets
+
 ## Live Site
 
-Hosted via GitHub Pages and embedded into [nuevoascend.com](https://www.nuevoascend.com)
+Hosted via GitHub and embedded into [nuevoascend.com](https://www.nuevoascend.com)
 
 © 2026 Nuevo Ascend Ltd. All rights reserved.
