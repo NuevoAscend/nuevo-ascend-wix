@@ -10,28 +10,24 @@ Part of the Nuevo Group | London, UK
 - `programmes.html` — All 5 Programmes
 - `contact.html` — Contact & Booking
 
-## Assets
+## Live site
 
-- `css/` — Stylesheets
-- `js/` — Site scripts
-- `assets/images/` — Image assets
-
-## Live Site
-
-The static site is deployed automatically to GitHub Pages on every push to `main`:
+Deployed automatically to GitHub Pages on every push to `main`:
 
 **https://nuevoascend.github.io/nuevo-ascend-wix/**
 
-### Wix setup (one time)
+Custom domain (after DNS is configured): **https://www.nuevoascend.com**
 
-Wix cannot render the HTML files directly from Git. The Velo page code loads the GitHub Pages site instead:
+## Connect your domain (one-time)
 
-1. In the Wix Editor, open **Home**, **Programmes**, and **Contact** pages.
-2. Add **Embed a Site** (HTML iframe) — full width, full height.
-3. Set the element ID to **`siteEmbed`** (Element ID in the settings panel).
-4. Hide the default Wix header/footer on those pages so only your site shows.
-5. **Publish** the site (or run `wix publish` from the repo).
+In your domain registrar (where you bought nuevoascend.com), remove Wix DNS records and add:
 
-If `#siteEmbed` is missing, visitors are redirected to the GitHub Pages URL instead.
+| Type  | Name | Value |
+|-------|------|-------|
+| CNAME | www  | `nuevoascend.github.io` |
+
+In GitHub: repo **Settings → Pages → Custom domain** → enter `www.nuevoascend.com` and enable **Enforce HTTPS**.
+
+Then in `src/public/staticSite.js`, switch `SITE_BASE` to `https://www.nuevoascend.com` and run `wix publish`.
 
 © 2026 Nuevo Ascend Ltd. All rights reserved.
