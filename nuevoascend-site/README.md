@@ -14,7 +14,7 @@ Part of the Nuevo Group | London, UK
 
 Deployed automatically to GitHub Pages on every push to `main`:
 
-**https://nuevoascend.github.io/nuevo-ascend-wix/**
+**https://nuevoascend.github.io/nuevoascend-site/nuevoascend-site/**
 
 Custom domain (after DNS is configured): **https://www.nuevoascend.com**
 
