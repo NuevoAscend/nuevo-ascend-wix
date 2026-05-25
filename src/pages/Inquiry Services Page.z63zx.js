@@ -1,6 +1,5 @@
-import wixLocation from 'wix-location';
 import { PAGES } from 'public/staticSite';
 
 $w.onReady(function () {
-  wixLocation.to(PAGES.contact);
+  window.location.replace(PAGES.contact);
 });
