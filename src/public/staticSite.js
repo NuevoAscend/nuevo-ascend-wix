@@ -1,5 +1,5 @@
 /** Base URL for the static marketing site (GitHub Pages). */
-export const SITE_BASE = 'https://nuevoascend.github.io/nuevoascend-site';
+export const SITE_BASE = 'https://nuevoascend.github.io/nuevo-ascend-wix';
 
 export const PAGES = {
   home: `${SITE_BASE}/index.html`,

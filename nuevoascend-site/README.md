@@ -20,7 +20,7 @@ Part of the Nuevo Group | London, UK
 
 The static site is deployed automatically to GitHub Pages on every push to `main`:
 
-**https://nuevoascend.github.io/nuevoascend-site/**
+**https://nuevoascend.github.io/nuevo-ascend-wix/**
 
 ### Wix setup (one time)
 
