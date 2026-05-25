@@ -1,0 +1,2412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programmes | Nuevo Ascend — Leadership Development & Consultancy</title>
+<style>:root {
+  --black:#080808; --charcoal:#111111; --panel:#181818;
+  --gold:#C8960C; --gold-lt:#E8B830; --green:#2E8B1A;
+  --white:#FFFFFF; --off:#F5F0E8; --grey:#777777; --lgrey:#BBBBBB;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:hidden}
+body{background:#080808;color:#F5F0E8;font-family:Arial,sans-serif;overflow-x:hidden;margin:0;padding:0}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html{overflow-x:hidden}
+
+  
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+    background: rgba(10,10,10,0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,150,12,0.2);
+  }
+
+  .nav-logo {
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: var(--white);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--lgrey);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: var(--black) !important;
+    padding: 10px 24px;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    transition: background 0.3s !important;
+  }
+
+  .nav-cta:hover { background: var(--gold-lt) !important; color: var(--black) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: auto;
+  padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 40px 80px;
+    position: relative;
+    background:
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(200,150,12,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 20% 80%, rgba(46,139,26,0.06) 0%, transparent 50%),
+      var(--black);
+  }
+
+  .hero-eyebrow {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    
+  }
+
+  .hero h1 {
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: clamp(56px, 10vw, 110px);
+    line-height: 0.9;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 8px;
+    
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-sub {
+    font-family: Georgia, serif;
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-style: italic;
+    color: var(--lgrey);
+    margin: 28px auto 48px;
+    max-width: 640px;
+    line-height: 1.5;
+    
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-val {
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: 42px;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-top: 6px;
+    display: block;
+  }
+
+  .hero-divider {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 60px auto 0;
+    
+  }
+
+  /* ── PROGRAMME NAV PILLS ── */
+  .prog-nav {
+    position: sticky;
+    top: 60px;
+    z-index: 90;
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(200,150,12,0.15);
+    padding: 16px 60px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .prog-pill {
+    padding: 8px 20px;
+    border: 1px solid rgba(200,150,12,0.3);
+    color: var(--lgrey);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    background: transparent;
+  }
+
+  .prog-pill:hover,
+  .prog-pill.active {
+    background: var(--gold);
+    color: var(--black);
+    border-color: var(--gold);
+  }
+
+  /* ── SECTION BASE ── */
+  .programme {
+    padding: 120px 0;
+    position: relative;
+  }
+
+  .programme:nth-child(even) {
+    background: var(--charcoal);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+
+  /* ── PROGRAMME HEADER ── */
+  .prog-header {
+    display: block;
+    margin-bottom: 48px;
+  }
+
+  .prog-number {
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: 140px;
+    line-height: 1;
+    color: rgba(200,150,12,0.08);
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .prog-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(200,150,12,0.4);
+    padding: 6px 16px;
+    margin-bottom: 20px;
+  }
+
+  .prog-title {
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: clamp(40px, 5vw, 68px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    color: var(--white);
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+
+  .prog-title span { color: var(--gold); display: block; }
+
+  .prog-description {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 1.65;
+    color: var(--lgrey);
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+
+  .prog-body {
+    font-size: 15px;
+    line-height: 1.75;
+    color: rgba(245,242,236,0.75);
+  }
+
+  /* ── GOLD RULE ── */
+  .gold-rule {
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 32px;
+  }
+
+  /* ── INFO CARDS ── */
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 56px;
+    background: none;
+    border: none;
+  }
+
+  .info-card {
+    background: var(--panel);
+    border: 1px solid rgba(200,150,12,0.2);
+    padding: 22px 18px;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .info-card:hover { background: #1e1e1e; border-color: rgba(200,150,12,0.45); }
+
+  .info-card-icon { display: none; }
+
+  .info-card-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .info-card-value {
+    font-family: Arial, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--off);
+    line-height: 1.5;
+  }
+
+  /* ── TWO-COL CONTENT ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+  }
+
+  .content-block h3 {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(200,150,12,0.25);
+  }
+
+  .check-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .check-list li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    font-size: 14px;
+    color: rgba(245,242,236,0.8);
+    line-height: 1.6;
+  }
+
+  .check-list li::before {
+    content: '▸';
+    color: var(--gold);
+    font-size: 12px;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+
+  /* ── PRICING ── */
+  .pricing-section {
+    margin-bottom: 60px;
+  }
+
+  .pricing-section h3 {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(200,150,12,0.25);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
+  .price-card {
+    border: 1px solid rgba(200,150,12,0.2);
+    padding: 32px 24px;
+    position: relative;
+    transition: border-color 0.3s, transform 0.3s;
+    background: rgba(200,150,12,0.02);
+  }
+
+  .price-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+  }
+
+  .price-card.featured {
+    border-color: var(--gold);
+    background: rgba(200,150,12,0.06);
+  }
+
+  .price-card.featured::before {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: -1px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    color: var(--black);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    padding: 4px 14px;
+  }
+
+  .price-name {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .price-amount {
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: 42px;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  .price-period {
+    font-size: 13px;
+    color: var(--grey);
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .price-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .price-features li {
+    font-size: 13px;
+    color: rgba(245,242,236,0.7);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .price-features li::before {
+    content: '✓';
+    color: var(--gold);
+    font-size: 11px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  /* ── CTA STRIP ── */
+  .cta-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 40px 48px;
+    background: linear-gradient(135deg, rgba(200,150,12,0.1), rgba(200,150,12,0.04));
+    border: 1px solid rgba(200,150,12,0.25);
+    flex-wrap: wrap;
+  }
+
+  .cta-strip-text h4 {
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+  }
+
+  .cta-strip-text p {
+    font-size: 14px;
+    color: var(--grey);
+  }
+
+  .btn-gold {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .btn-gold:hover {
+    background: var(--gold-lt);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    display: inline-block;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 34px;
+    text-decoration: none;
+    transition: all 0.3s;
+    white-space: nowrap;
+  }
+
+  .btn-outline:hover {
+    background: var(--gold);
+    color: var(--black);
+  }
+
+  /* ── QUOTE CALLOUT ── */
+  .quote-callout {
+    border-left: 4px solid var(--gold);
+    padding: 24px 32px;
+    background: rgba(200,150,12,0.04);
+    margin: 40px 0;
+  }
+
+  .quote-callout p {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--offwhite);
+    line-height: 1.5;
+  }
+
+  /* ── PROGRAMME DIVIDER ── */
+  .prog-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(200,150,12,0.3), transparent);
+  }
+
+  /* ── PHOTO GALLERY ── */
+  .photo-strip {
+    display: grid;
+    gap: 16px;
+    margin: 48px 0;
+    align-items: stretch;
+  }
+  .photo-strip.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .photo-strip.cols-2-1 { grid-template-columns: 2fr 1fr; }
+  .photo-strip.cols-1-2 { grid-template-columns: 1fr 2fr; }
+  .photo-strip.cols-4 { grid-template-columns: repeat(4, 1fr); }
+
+  .photo-ph {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    min-height: 0;
+    max-height: 280px;
+    background: var(--panel);
+    border: 1px solid rgba(200,150,12,0.25);
+    overflow: hidden;
+    padding: 0;
+    display: block;
+    transition: border-color 0.3s;
+  }
+
+  .photo-ph:hover {
+    border-color: rgba(200,150,12,0.55);
+  }
+
+  .photo-ph img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    min-height: 0 !important;
+  }
+
+  .photo-ph-inner,
+  .photo-ph-icon,
+  .photo-ph-label,
+  .photo-ph-size {
+    display: none !important;
+  }
+  .photo-caption-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(200,150,12,0.1);
+    margin-bottom: 4px;
+  }
+  .photo-caption-bar span {
+    font-size: 10px;
+    font-weight:700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(200,150,12,0.4);
+  }
+  .photo-caption-bar::before {
+    content: '📷';
+    font-size: 13px;
+    opacity: 0.4;
+  }
+
+  /* ── FOOTER CTA ── */
+  .footer-cta {
+    padding: 140px 60px;
+    text-align: center;
+    background:
+      radial-gradient(ellipse 60% 80% at 50% 50%, rgba(200,150,12,0.07) 0%, transparent 70%),
+      var(--black);
+    position: relative;
+  }
+
+  .footer-cta h2 {
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: clamp(48px, 7vw, 90px);
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+  }
+
+  .footer-cta h2 span { color: var(--gold); display: block; }
+
+  .footer-cta p {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--lgrey);
+    max-width: 600px;
+    margin: 0 auto 52px;
+    line-height: 1.5;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--charcoal);
+    border-top: 1px solid rgba(200,150,12,0.15);
+    padding: 48px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  footer .logo {
+    font-family: 'Arial Black', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--white);
+  }
+
+  footer .logo span { color: var(--gold); }
+
+  footer p {
+    font-size: 12px;
+    color: var(--grey);
+    letter-spacing: 0.5px;
+  }
+
+  footer .footer-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+
+  footer .footer-links a {
+    font-size: 12px;
+    color: var(--grey);
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+
+  footer .footer-links a:hover { color: var(--gold); }
+
+  /* ── ANIMATIONS ── */
+  
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  
+.tagline-track:hover { animation-play-state: paused; }
+.tagline-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+}
+
+
+
+  100% { transform: translateX(-50%); }
+}
+
+
+/* ══════════════════════════════════════════
+   HAMBURGER MENU
+══════════════════════════════════════════ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 300;
+  background: none;
+  border: none;
+  outline: none;
+}
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #C8960C;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* Mobile drawer */
+.mobile-drawer {
+  position: fixed;
+  top: 0; right: -100%;
+  width: min(320px, 85vw);
+  height: 100vh;
+  background: #0A0A0A;
+  border-left: 1px solid rgba(200,150,12,0.2);
+  z-index: 250;
+  transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
+  display: flex;
+  flex-direction: column;
+  padding: 100px 40px 40px;
+  gap: 8px;
+}
+.mobile-drawer.open { right: 0; }
+.mobile-drawer a {
+  display: block;
+  font-family: 'Arial Black', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #BBBBBB;
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(200,150,12,0.1);
+  transition: color 0.3s, padding-left 0.3s;
+}
+.mobile-drawer a:hover,
+.mobile-drawer a:active { color: #C8960C; padding-left: 8px; }
+.mobile-drawer a.drawer-cta {
+  margin-top: 20px;
+  background: #C8960C;
+  color: #000 !important;
+  padding: 16px 24px !important;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 3px;
+  border-bottom: none;
+}
+.mobile-drawer a.drawer-cta:hover { background: #E8B830; padding-left: 24px !important; }
+.mobile-drawer-close {
+  position: absolute;
+  top: 24px; right: 24px;
+  background: none;
+  border: 1px solid rgba(200,150,12,0.3);
+  color: #C8960C;
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.mobile-drawer-close:hover { background: rgba(200,150,12,0.1); }
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 240;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+  backdrop-filter: blur(4px);
+}
+.drawer-overlay.open { opacity: 1; pointer-events: all; }
+.mobile-drawer-socials {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(200,150,12,0.1);
+}
+.mobile-drawer-socials a {
+  width: 40px; height: 40px;
+  border: 1px solid rgba(200,150,12,0.3);
+  display: flex; align-items: center; justify-content: center;
+  color: #777;
+  font-size: 11px; font-weight: 700;
+  text-decoration: none;
+  padding: 0 !important;
+  border-bottom: 1px solid rgba(200,150,12,0.3) !important;
+  transition: all 0.3s;
+}
+.mobile-drawer-socials a:hover { border-color: #C8960C !important; color: #C8960C; }
+
+/* ══════════════════════════════════════════
+   GLOBAL MOBILE FIXES
+══════════════════════════════════════════ */
+@media(max-width:900px) {
+  /* Nav */
+  nav { padding: 0 20px; height: 68px; }
+  .nav-links { display: none !important; }
+  .hamburger { display: flex; }
+
+  /* Hero — hide right column photo, show text only */
+  .hero { grid-template-columns: 1fr !important; padding: 80px 24px 60px !important; gap: 40px; }
+  .hero-visual { display: none !important; }
+  .hero-scroll { display: none; }
+  .hero h1 { font-size: clamp(48px,12vw,80px) !important; }
+
+  /* About page hero photo — move below hero text on mobile */
+  .page-hero { padding: 80px 24px 60px !important; }
+  .page-hero > div[style*="position:absolute"][style*="right:60px"] {
+    position: relative !important;
+    top: auto !important; right: auto !important;
+    width: 100% !important;
+    height: 280px !important;
+    margin-top: 24px;
+    border: 1px solid rgba(200,150,12,0.3);
+  }
+
+  /* Contact page hero photo — same treatment */
+  .page-hero > div[style*="right:60px"] {
+    position: relative !important;
+    top: auto !important; right: auto !important;
+    width: 100% !important;
+    height: 260px !important;
+    margin-top: 20px;
+  }
+
+  /* Stats bar */
+  .stats-bar { grid-template-columns: 1fr 1fr !important; padding: 0 !important; }
+  .stat-item { padding: 24px 16px; }
+  .stat-num { font-size: 38px; }
+
+  /* Story grid */
+  .story-grid { grid-template-columns: 1fr !important; gap: 40px; padding: 0 !important; }
+  .story-img-side { display: none; }
+
+  /* Services grid */
+  .services-grid { grid-template-columns: 1fr !important; }
+
+  /* Who we serve */
+  .serve-grid { grid-template-columns: 1fr 1fr !important; gap: 16px; }
+
+  /* Trust logos */
+  .trust-logos { gap: 24px; }
+  .trust-logo { font-size: 14px; }
+  .featured-logos { gap: 20px; }
+
+  /* Award banner */
+  .award-banner { flex-direction: column; gap: 20px; padding: 40px 24px; }
+  .award-right { max-width: 100%; font-size: 16px; }
+
+  /* Process steps */
+  .process-steps { grid-template-columns: 1fr 1fr !important; gap: 32px; }
+  .process-steps::before { display: none; }
+
+  /* Testimonials */
+  .testi-grid { grid-template-columns: 1fr !important; }
+
+  /* Values */
+  .values-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Credentials */
+  .cred-grid { grid-template-columns: 1fr 1fr !important; gap: 16px; }
+
+  /* Footer */
+  .site-footer { padding: 48px 24px 28px; }
+  .footer-top { grid-template-columns: 1fr 1fr !important; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 16px; }
+
+  /* Programme cards */
+  .prog-header { grid-template-columns: 1fr !important; gap: 32px; }
+  .two-col { grid-template-columns: 1fr !important; gap: 32px; }
+  .pricing-grid { grid-template-columns: 1fr !important; }
+  .prog-nav { padding: 12px 16px; gap: 6px; }
+  .prog-pill { font-size: 10px; padding: 6px 12px; }
+  .photo-strip.cols-3,
+  .photo-strip.cols-2-1,
+  .photo-strip.cols-1-2,
+  .photo-strip.cols-4 { grid-template-columns: 1fr !important; }
+
+  /* Contact form */
+  .contact-main { grid-template-columns: 1fr !important; gap: 40px; padding: 60px 24px !important; }
+  .form-row { grid-template-columns: 1fr !important; }
+  .booking-options { padding: 60px 24px; }
+  .options-grid { grid-template-columns: 1fr !important; }
+  .faq-grid { grid-template-columns: 1fr !important; }
+  .faq-item:nth-child(even) { border-right: none; }
+
+  /* Info grid */
+  .info-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* CTA section */
+  .cta-section, .about-cta, .footer-cta, .contact-cta { padding: 80px 24px !important; }
+  .cta-h2, .about-cta h2, .footer-cta h2 { font-size: clamp(44px,11vw,72px) !important; letter-spacing:-1px; }
+
+  /* Sections */
+  .section, .story, .values, .credentials, .mission,
+  .timeline-section, .intro, .booking-options, .faq-section { padding: 72px 24px !important; }
+
+  /* Intro grid */
+  .intro-grid { grid-template-columns: 1fr !important; }
+  .intro-side { position: static !important; }
+
+  /* Timeline */
+  .tl-track { padding-left: 32px; }
+
+  /* Spotify */
+  .spotify-strip { padding: 20px 24px; flex-direction: column; gap: 16px; }
+
+  /* Featured */
+  .featured-strip { padding: 40px 24px; }
+  .featured-logo-item svg { transform: scale(0.85); }
+
+  /* Page hero num */
+  .page-hero-num { display: none; }
+
+  /* CTA strip */
+  .cta-strip { flex-direction: column; gap: 20px; padding: 32px 24px; }
+
+  /* Tagline strip */
+  
+  
+}
+
+@media(max-width:480px) {
+  .serve-grid { grid-template-columns: 1fr !important; }
+  .values-grid { grid-template-columns: 1fr !important; }
+  .cred-grid { grid-template-columns: 1fr !important; }
+  .process-steps { grid-template-columns: 1fr !important; }
+  .footer-top { grid-template-columns: 1fr !important; }
+  .stats-bar { grid-template-columns: 1fr 1fr !important; }
+  .hero h1 { font-size: clamp(42px,13vw,64px) !important; }
+}
+
+
+/* CSS-only reveal — no JS needed */
+
+
+
+
+}
+
+}
+/* Stagger delays */
+
+
+
+
+
+/* Make sure .visible class also works for pages that still use it */
+
+
+
+/* CSS-only hamburger */
+#menuToggle { display:none; }
+.hamburger-label {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 300;
+}
+.hamburger-label span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #C8960C;
+  border-radius: 2px;
+  transition: all 0.35s ease;
+  transform-origin: center;
+}
+#menuToggle:checked ~ nav .hamburger-label span:nth-child(1),
+.hamburger-label.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+#menuToggle:checked ~ nav .hamburger-label span:nth-child(2),
+.hamburger-label.open span:nth-child(2) { opacity:0; transform:scaleX(0); }
+#menuToggle:checked ~ nav .hamburger-label span:nth-child(3),
+.hamburger-label.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-drawer { position:fixed; top:0; right:-100%; width:min(320px,85vw); height:100vh; background:#0A0A0A; border-left:1px solid rgba(200,150,12,0.2); z-index:250; transition:right 0.4s cubic-bezier(0.4,0,0.2,1); display:flex; flex-direction:column; padding:100px 40px 40px; gap:8px; }
+.drawer-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:240; opacity:0; pointer-events:none; transition:opacity 0.4s; }
+/* CSS toggle for drawer open state */
+#menuToggle:checked ~ .mobile-drawer { right:0; }
+#menuToggle:checked ~ .drawer-overlay { opacity:1; pointer-events:all; }
+.mobile-drawer a { display:block; font-family:'Arial Black',Arial,sans-serif; font-weight:800; font-size:28px; letter-spacing:2px; text-transform:uppercase; color:#BBBBBB; text-decoration:none; padding:12px 0; border-bottom:1px solid rgba(200,150,12,0.1); transition:color 0.3s,padding-left 0.3s; }
+.mobile-drawer a:hover,.mobile-drawer a:active { color:#C8960C; padding-left:8px; }
+.mobile-drawer a.drawer-cta { margin-top:20px; background:#C8960C; color:#000!important; padding:16px 24px!important; text-align:center; font-size:14px; letter-spacing:3px; border-bottom:none; }
+.drawer-close-label { position:absolute; top:24px; right:24px; background:none; border:1px solid rgba(200,150,12,0.3); color:#C8960C; width:36px; height:36px; display:flex; align-items:center; justify-content:center; font-size:18px; cursor:pointer; }
+.drawer-close-label:hover { background:rgba(200,150,12,0.1); }
+.mobile-drawer-socials { display:flex; gap:12px; margin-top:auto; padding-top:24px; border-top:1px solid rgba(200,150,12,0.1); }
+.mobile-drawer-socials a { width:40px; height:40px; border:1px solid rgba(200,150,12,0.3)!important; display:flex; align-items:center; justify-content:center; color:#777; font-size:11px; font-weight:700; text-decoration:none; padding:0!important; border-bottom:1px solid rgba(200,150,12,0.3)!important; transition:all 0.3s; }
+.mobile-drawer-socials a:hover { border-color:#C8960C!important; color:#C8960C; }
+@media(max-width:900px){
+  .hamburger { display:none!important; }
+  .hamburger-label { display:flex; }
+}
+
+
+
+
+
+/* Reveal — everything visible, simple fade in via CSS */
+
+
+
+.mobile-photo-ph {
+  display: none;
+  width: 100%;
+  background: #1A1A1A;
+  border: 1px dashed rgba(200,150,12,0.35);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  padding: 48px 20px;
+  margin: 0 0 24px 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+@media(max-width:900px) {
+  .mobile-photo-ph { display: flex !important; }
+}
+.mobile-ph-icon { font-size: 32px; opacity: 0.6; }
+.mobile-ph-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(200,150,12,0.6); line-height: 1.5; }
+.mobile-ph-size { font-size: 10px; color: #555; }
+
+
+
+
+
+
+
+
+/* ── TAGLINE TICKER ── */
+
+
+.tagline-track:hover { animation-play-state:paused; }
+
+
+
+  100% { transform: translateX(-50%); }
+}
+
+
+.tagline-strip{background:#C8960C;overflow:hidden;padding:10px 0;white-space:nowrap;border-bottom:1px solid rgba(0,0,0,.12)}
+.tagline-track{display:inline-block;animation:tickerGo 40s linear infinite;white-space:nowrap}
+.tagline-word{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:14px;letter-spacing:4px;text-transform:uppercase;color:#000;padding:0 32px;display:inline}
+.tagline-dot{width:5px;height:5px;background:rgba(0,0,0,.35);border-radius:50%;display:inline-block;vertical-align:middle;margin:0 4px}
+@keyframes tickerGo{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+
+/* ── FOOTER LAYOUT FIX ── */
+.site-footer { background:#111111; border-top:1px solid rgba(200,150,12,.12); padding:56px 60px 28px; }
+.footer-top { display:grid !important; grid-template-columns:1.5fr 1fr 1fr 1fr !important; gap:48px; margin-bottom:40px; }
+.footer-tagline { font-size:13px; color:#777; line-height:1.75; max-width:280px; margin-top:12px; }
+.footer-col h4 { font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#C8960C; margin-bottom:16px; padding-bottom:8px; border-bottom:1px solid rgba(200,150,12,.12); display:block; }
+.footer-col ul { list-style:none !important; display:flex; flex-direction:column; gap:9px; padding:0; }
+.footer-col ul li { list-style:none !important; }
+.footer-col ul a { font-size:13px; color:#777; text-decoration:none; }
+.footer-col ul a:hover { color:#C8960C; }
+.footer-col address { font-style:normal; font-size:13px; color:#777; line-height:1.8; }
+.footer-col address strong { color:#BBBBBB; font-weight:500; display:block; margin-bottom:2px; }
+.footer-col address a { color:#777; text-decoration:none; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,.06); padding-top:24px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
+.footer-copy { font-size:12px; color:#555; }
+.footer-copy span { color:#C8960C; }
+.footer-socials { display:flex; gap:10px; }
+.footer-social-link { width:34px; height:34px; border:1px solid rgba(200,150,12,.2); display:flex; align-items:center; justify-content:center; color:#777; text-decoration:none; font-size:11px; font-weight:700; transition:all .3s; }
+.footer-social-link:hover { border-color:#C8960C; color:#C8960C; }
+@media(max-width:900px) {
+  .site-footer { padding:44px 24px 24px; }
+  .footer-top { grid-template-columns:1fr 1fr !important; gap:28px; }
+  .footer-bottom { flex-direction:column; text-align:center; }
+}
+@media(max-width:480px) {
+  .footer-top { grid-template-columns:1fr !important; }
+}
+
+
+
+
+
+/* PAGE LOAD ANIMATIONS */
+ to { opacity:1; transform:translateY(0); } }
+ to { opacity:1; transform:translateX(0); } }
+ to { opacity:1; transform:translateX(0); } }
+
+
+
+
+
+
+
+
+
+
+
+.service-card { animation: slideUp 0.6s both; }
+.service-card:nth-child(2) { animation-delay:.1s; }
+.service-card:nth-child(3) { animation-delay:.2s; }
+.service-card:nth-child(4) { animation-delay:.3s; }
+.service-card:nth-child(5) { animation-delay:.4s; }
+.service-card:nth-child(6) { animation-delay:.5s; }
+
+.stat-item  { animation: slideUp 0.5s both; }
+.stat-item:nth-child(2) { animation-delay:.1s; }
+.stat-item:nth-child(3) { animation-delay:.2s; }
+.stat-item:nth-child(4) { animation-delay:.3s; }
+
+.serve-card { animation: slideUp 0.6s both; }
+.serve-card:nth-child(2) { animation-delay:.1s; }
+.serve-card:nth-child(3) { animation-delay:.2s; }
+.serve-card:nth-child(4) { animation-delay:.3s; }
+.serve-card:nth-child(5) { animation-delay:.4s; }
+.serve-card:nth-child(6) { animation-delay:.5s; }
+
+.val-card  { animation: slideUp 0.6s both; }
+.val-card:nth-child(2) { animation-delay:.1s; }
+.val-card:nth-child(3) { animation-delay:.2s; }
+.val-card:nth-child(4) { animation-delay:.3s; }
+
+.cred-card { animation: slideUp 0.6s both; }
+.cred-card:nth-child(2) { animation-delay:.1s; }
+.cred-card:nth-child(3) { animation-delay:.2s; }
+.cred-card:nth-child(4) { animation-delay:.3s; }
+.cred-card:nth-child(5) { animation-delay:.4s; }
+.cred-card:nth-child(6) { animation-delay:.5s; }
+
+.testi-card { animation: slideUp 0.6s both; }
+.testi-card:nth-child(2) { animation-delay:.15s; }
+.testi-card:nth-child(3) { animation-delay:.3s; }
+
+.tl-entry { animation: slideLeft 0.6s both; }
+.tl-entry:nth-child(2) { animation-delay:.1s; }
+.tl-entry:nth-child(3) { animation-delay:.2s; }
+.tl-entry:nth-child(4) { animation-delay:.3s; }
+.tl-entry:nth-child(5) { animation-delay:.4s; }
+.tl-entry:nth-child(6) { animation-delay:.5s; }
+.tl-entry:nth-child(7) { animation-delay:.6s; }
+
+/* HOVER EFFECTS */
+.service-card:hover, .serve-card:hover, .val-card:hover,
+.cred-card:hover, .testi-card:hover, .price-card:hover,
+.booking-card:hover, .option-card:hover {
+  transform: translateY(-4px);
+  transition: transform .3s ease, border-color .3s ease, background .3s ease;
+}
+.btn-gold, .btn-ghost, .btn-submit, .btn-full {
+  transition: background .3s ease, transform .3s ease, color .3s ease;
+}
+.btn-gold:hover, .btn-ghost:hover, .btn-submit:hover { transform: translateY(-2px); }
+.nav-links a, .footer-social-link, .mobile-drawer a {
+  transition: color .3s ease, border-color .3s ease;
+}
+.prog-pill { transition: background .3s ease, color .3s ease, border-color .3s ease; }
+
+
+
+
+.reveal.visible,.reveal-left.visible,.reveal-right.visible {
+  opacity: 1;
+  transform: none;
+}
+/* Hover effects */
+.service-card,.serve-card,.val-card,.cred-card,.testi-card,.price-card,.booking-card {
+  transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+.service-card:hover,.serve-card:hover,.val-card:hover,.cred-card:hover,
+.testi-card:hover,.price-card:hover,.booking-card:hover {
+  transform: translateY(-4px);
+}
+.btn-gold,.btn-ghost { transition: background 0.3s ease, transform 0.3s ease; }
+.btn-gold:hover,.btn-ghost:hover { transform: translateY(-2px); }
+
+
+
+
+
+
+
+
+
+
+/* SCROLL REVEAL */
+
+
+
+
+
+
+
+
+
+
+.tk{background:#C8960C;overflow:hidden;padding:10px 0;white-space:nowrap;border-bottom:1px solid rgba(0,0,0,.12)}
+.tt{display:inline-block;animation:tka 40s linear infinite;white-space:nowrap}
+.tw{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:14px;letter-spacing:4px;text-transform:uppercase;color:#000;padding:0 30px;display:inline}
+.td{width:6px;height:6px;background:rgba(0,0,0,.4);border-radius:50%;display:inline-block;vertical-align:middle;margin:0 6px}
+@keyframes tka{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+
+/* REVEAL — visible by default, animate as enhancement */
+
+
+
+
+to{opacity:1;transform:none}}
+to{opacity:1;transform:none}}
+to{opacity:1;transform:none}}
+
+
+
+
+
+/* REVEAL */
+
+
+
+ to{opacity:1;transform:none} }
+ to{opacity:1;transform:none} }
+  to{opacity:1;transform:none} }
+
+
+/* Programmes mobile overflow fix */
+@media(max-width:900px){
+  .prog-header,.prog-section,.two-col,.pricing-section,.quote-callout,
+  .info-grid,.photo-strip,.cta-strip,.prog-nav{
+    padding-left:20px!important;padding-right:20px!important
+  }
+  .prog-section{padding:60px 20px!important}
+  .two-col{grid-template-columns:1fr!important;gap:24px!important}
+  .info-grid{grid-template-columns:1fr 1fr!important}
+  .pricing-grid{grid-template-columns:1fr!important}
+  .photo-strip{grid-template-columns:1fr!important}
+  .prog-title{font-size:clamp(32px,8vw,56px)!important;letter-spacing:-1px!important}
+  .stit{font-size:18px!important}
+}
+
+
+@media(max-width:900px){
+  .prog-section,.two-col,.pricing-section,.quote-callout,.info-grid,.photo-strip,.cta-strip{padding-left:20px!important;padding-right:20px!important}
+  .prog-section{padding-top:50px!important;padding-bottom:50px!important}
+  .two-col{grid-template-columns:1fr!important;gap:20px!important}
+  .pricing-grid{grid-template-columns:1fr!important}
+  .photo-strip{grid-template-columns:1fr!important}
+  .prog-title{font-size:clamp(30px,7vw,52px)!important;letter-spacing:-1px!important}
+  .info-grid{grid-template-columns:1fr 1fr!important}
+}
+
+
+.jb{position:fixed;bottom:24px;right:20px;z-index:999;background:#C8960C;color:#000;width:48px;height:48px;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:22px;font-weight:900;text-decoration:none;box-shadow:0 4px 16px rgba(200,150,12,.5)}
+@media(max-width:900px){.jb{display:flex!important}}
+
+
+.book-now{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#C8960C;color:#000;font-weight:800;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:12px 20px;text-decoration:none;width:100%;box-sizing:border-box;margin-top:12px;transition:background .3s ease}
+.book-now:hover{background:#E8B830}
+.book-now-ghost{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(200,150,12,.5);color:#C8960C;font-weight:700;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:11px 20px;text-decoration:none;width:100%;box-sizing:border-box;margin-top:8px;transition:all .3s ease}
+.book-now-ghost:hover{background:rgba(200,150,12,.08);border-color:#C8960C}
+
+
+.rv.an  { animation: rvUp   0.65s ease both }
+.rl.an  { animation: rvLeft 0.65s ease both }
+.rr.an  { animation: rvRight 0.65s ease both }
+@keyframes rvUp    { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:none} }
+@keyframes rvLeft  { from{opacity:0;transform:translateX(-24px)} to{opacity:1;transform:none} }
+@keyframes rvRight { from{opacity:0;transform:translateX(24px)}  to{opacity:1;transform:none} }
+
+
+@media(max-width:900px){
+  
+@media(max-width:900px){
+  body,html{overflow-x:hidden!important;max-width:100vw!important}
+  .prog-nav,.prog-section,.two-col,.pricing-section,.quote-callout,
+  .info-grid,.photo-strip,.cta-strip,.prog-header,.programme{
+    padding-left:16px!important;padding-right:16px!important;
+    max-width:100%!important;overflow-x:hidden!important
+  }
+  .prog-title{font-size:clamp(28px,6vw,44px)!important;letter-spacing:0!important}
+  .two-col{grid-template-columns:1fr!important}
+  .info-grid{grid-template-columns:1fr!important}
+  .pricing-grid{grid-template-columns:1fr!important}
+  .photo-strip{grid-template-columns:1fr!important}
+  .photo-ph{min-height:200px!important}
+  table,th,td{font-size:13px!important}
+  .price-card{padding:24px 16px!important}
+}
+
+
+/* Ensure no teal/green background bleeds through */
+html, body {
+  background:#080808!important;
+  min-height:100%;
+}
+
+
+
+  .dr { z-index:9997!important; }
+  .ov { z-index:9996!important; }
+  /* Mobile body overflow */
+  body, html { overflow-x:hidden!important; max-width:100vw!important; }
+  /* Fix all sections to not overflow */
+  * { max-width:100%!important; }
+  img:not([style*="height:90px"]):not([style*="height:48px"]) {
+    max-width:100%!important;
+    height:auto!important;
+  }
+}
+
+
+@media(max-width:900px){
+  .prog-nav{
+    overflow-x:auto!important;
+    -webkit-overflow-scrolling:touch!important;
+    flex-wrap:nowrap!important;
+    padding:12px 16px!important;
+    gap:8px!important;
+  }
+  .prog-pill{
+    white-space:nowrap!important;
+    flex-shrink:0!important;
+    font-size:10px!important;
+    padding:8px 14px!important;
+  }
+  .prog-section, .prog-header{
+    padding:50px 16px!important;
+  }
+  .info-grid{
+    grid-template-columns:1fr!important;
+    padding:0!important;
+  }
+  .two-col{
+    grid-template-columns:1fr!important;
+    padding:0!important;
+  }
+  .pricing-grid{
+    grid-template-columns:1fr!important;
+  }
+  .photo-strip{
+    grid-template-columns:1fr!important;
+  }
+  .quote-callout{
+    padding:24px 16px!important;
+  }
+  .cta-strip{
+    flex-direction:column!important;
+    padding:40px 16px!important;
+    gap:16px!important;
+  }
+  .prog-title{
+    font-size:clamp(26px,6vw,40px)!important;
+    word-break:break-word!important;
+  }
+}
+
+</style>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/programmes-fix.css">
+</head>
+<body>
+<input type="checkbox" id="mt">
+<!-- NAV -->
+<nav>
+  <a href="index.html" style="display:flex;align-items:center;text-decoration:none"><img src="assets/images/20ba2a_a200ff1506684226ab8cf4f909ba07a0~mv2.png" alt="Nuevo Ascend" style="height:90px;width:auto;object-fit:contain;display:block"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="programmes.html">Programmes</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Book a Call</a></li>
+  </ul>
+  <label for="mt" class="hl" aria-label="Open menu"><span></span><span></span><span></span></label>
+</nav>
+<div class="ov"><label for="mt" style="position:absolute;inset:0;cursor:pointer" aria-label="Close menu"></label></div>
+<div class="dr">
+  <label for="mt" class="dcl" aria-label="Close menu">&#x2715;</label>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="programmes.html">Programmes</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="dc">Book a Call</a>
+  <div class="ds">
+    <a href="https://www.facebook.com/share/14gD8bDvkio/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">fb</a>
+    <a href="https://www.linkedin.com/company/nuevo-ascend/" target="_blank" rel="noopener noreferrer">in</a>
+    <a href="https://www.instagram.com/nuevoascend" target="_blank" rel="noopener noreferrer">ig</a>
+  </div>
+</div>
+<div class="tk" aria-hidden="true">
+  <div class="tt"><span class="tw">Lead</span><span class="td"></span><span class="tw">Elevate</span><span class="td"></span><span class="tw">Empower</span><span class="td"></span><span class="tw">Ascend</span><span class="td"></span><span class="tw">Lead</span><span class="td"></span><span class="tw">Elevate</span><span class="td"></span><span class="tw">Empower</span><span class="td"></span><span class="tw">Ascend</span><span class="td"></span><span class="tw">Lead</span><span class="td"></span><span class="tw">Elevate</span><span class="td"></span><span class="tw">Empower</span><span class="td"></span><span class="tw">Ascend</span><span class="td"></span><span class="tw">Lead</span><span class="td"></span><span class="tw">Elevate</span><span class="td"></span><span class="tw">Empower</span><span class="td"></span><span class="tw">Ascend</span><span class="td"></span></div>
+</div>
+<!-- TAGLINE TICKER -->
+<div class="tagline-strip" aria-hidden="true">
+  <div class="tagline-track"><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span><span class="tagline-word">Lead</span><span class="tagline-dot"></span><span class="tagline-word">Elevate</span><span class="tagline-dot"></span><span class="tagline-word">Empower</span><span class="tagline-dot"></span><span class="tagline-word">Ascend</span><span class="tagline-dot"></span></div>
+</div>
+
+<div class="sp-strip an" data-podcast id="podcast">
+  <div class="sp-lb">
+    <div class="sp-ic" aria-hidden="true">&#9835;</div>
+    <div><div class="sp-lt">Listen Now</div><div class="sp-ls">Podcast Episode</div></div>
+  </div>
+  <div class="sp-main">
+    <button type="button" class="sp-card" data-sp-play aria-expanded="false" aria-controls="sp-player">
+      <span class="sp-play" aria-hidden="true">&#9654;</span>
+      <span class="sp-meta">
+        <span class="sp-title">How I Crushed It</span>
+        <span class="sp-sub">Leon Francis &middot; Tap play to listen here</span>
+      </span>
+      <span class="sp-btn">Play &#x2192;</span>
+    </button>
+    <div class="sp-embed" data-sp-player aria-label="Spotify player"></div>
+    <a class="sp-link" href="https://open.spotify.com/episode/6nXYAmq9eBohDM4sr0WTos" target="_blank" rel="noopener noreferrer">Open in Spotify</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-eyebrow">Nuevo Ascend Ltd — Leadership Development & Consultancy</p>
+  <h1>Our <em>Programmes</em></h1>
+  <p class="hero-sub">Five distinct pathways. One mission — to help you and your organisation rise.</p>
+  <div class="hero-stats">
+    <div class="stat">
+      <span class="stat-val">5</span>
+      <span class="stat-label">Programmes</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">20+</span>
+      <span class="stat-label">Years Experience</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">16</span>
+      <span class="stat-label">Age First Led a Team</span>
+    </div>
+    <div class="stat">
+      <span class="stat-val">BBBA</span>
+      <span class="stat-label">2024 Award Winner</span>
+    </div>
+  </div>
+  <div class="hero-divider"></div>
+</section>
+
+<!-- PROGRAMME NAV -->
+<div class="prog-nav">
+  <a href="#coaching"      class="prog-pill">01 — Coaching</a>
+  <a href="#workshops"     class="prog-pill">02 — Workshops</a>
+  <a href="#consultancy"   class="prog-pill">03 — Consultancy</a>
+  <a href="#young-leaders" class="prog-pill">04 — Young Leaders</a>
+  <a href="#speaking"      class="prog-pill">05 — Speaking</a>
+</div>
+
+<aside class="prog-jump" aria-label="Jump to programme section">
+  <span class="prog-jump-title">Sections</span>
+  <a href="#coaching" data-jump="coaching" title="1:1 Coaching"><span class="prog-jump-num">01</span><span class="prog-jump-lbl">Coaching</span></a>
+  <a href="#workshops" data-jump="workshops" title="Workshops"><span class="prog-jump-num">02</span><span class="prog-jump-lbl">Workshops</span></a>
+  <a href="#consultancy" data-jump="consultancy" title="Consultancy"><span class="prog-jump-num">03</span><span class="prog-jump-lbl">Consultancy</span></a>
+  <a href="#young-leaders" data-jump="young-leaders" title="Young Leaders"><span class="prog-jump-num">04</span><span class="prog-jump-lbl">Young Leaders</span></a>
+  <a href="#speaking" data-jump="speaking" title="Speaking"><span class="prog-jump-num">05</span><span class="prog-jump-lbl">Speaking</span></a>
+</aside>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PROGRAMME 01 — 1:1 LEADERSHIP COACHING -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="programme" id="coaching">
+  <div class="container" style="position:relative;">
+    <div class="prog-number">01</div>
+
+    <div class="prog-header reveal">
+      <div>
+        <span class="prog-tag">Programme 01</span>
+        <h2 class="prog-title">1:1 Leadership <span>Coaching</span></h2>
+        <div class="gold-rule"></div>
+        <p class="prog-description">Personal, honest coaching built on two decades of real leadership — not textbooks.</p>
+        <p class="prog-body">This is coaching for people who are serious about progression. Whether you are stepping into management for the first time, pushing for a senior promotion, or rebuilding confidence after a setback — this programme gives you a dedicated, experienced thinking partner who has genuinely been where you are trying to go.</p>
+      </div>
+      <div>
+        <div class="info-grid">
+          <div class="info-card rv">
+            <span class="info-card-icon">👤</span>
+            <span class="info-card-label">Format</span>
+            <span class="info-card-value">1:1 Sessions<br>via Zoom or In-Person</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">📅</span>
+            <span class="info-card-label">Duration</span>
+            <span class="info-card-value">Single Session to 8-Week Programme</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">⏱</span>
+            <span class="info-card-label">Session Length</span>
+            <span class="info-card-value">60–90 Minutes per Session</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">🎯</span>
+            <span class="info-card-label">Start</span>
+            <span class="info-card-value">Rolling Intake — Start Anytime</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div class="content-block">
+        <h3>Who This Is For</h3>
+        <ul class="check-list">
+          <li>First-time managers finding their feet in a leadership role</li>
+          <li>Professionals preparing for interviews or promotion boards</li>
+          <li>Mid-career leaders wanting to step up to senior management</li>
+          <li>Individuals from underrepresented backgrounds navigating corporate environments</li>
+          <li>Anyone who has been overlooked and wants to understand why — and what to do about it</li>
+          <li>Leaders rebuilding confidence after redundancy, a difficult role, or a career setback</li>
+          <li>Retail and customer experience professionals seeking to transition into leadership</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h3>What's Included</h3>
+        <ul class="check-list">
+          <li>Dedicated 1:1 sessions with an experienced senior leader</li>
+          <li>Personalised leadership development plan created in session one</li>
+          <li>Pre-session reflection exercises to deepen your thinking</li>
+          <li>Practical tools for difficult conversations, stakeholder management, and performance leadership</li>
+          <li>Interview and promotion preparation — mock sessions and feedback</li>
+          <li>Post-session action notes sent within 24 hours</li>
+          <li>WhatsApp support between sessions (on programme packages)</li>
+          <li>End-of-programme review and next-steps roadmap</li>
+        </ul>
+      </div>
+    </div>
+
+            <!-- PHOTO STRIP — Coaching -->
+    <div class="photo-strip cols-3 reveal">
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_5686d32a1af047969db529c2bd1d4e23~mv2.jpg" alt="Leon in a one-to-one coaching conversation">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_354a94178ba74dcfac2551954bf020b5~mv2.png" alt="Leon with a coaching client">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_bbbf7437ff98476196eaa6b762870edc~mv2.png" alt="Leon in a focused coaching discussion">
+      </div>
+    </div>
+<div class="quote-callout reveal">
+      <p>"I was a manager at 16. No mentor. No roadmap. I figured it out — and spent the next 20 years building the playbook I wish I'd had. That is what I bring to every coaching session."</p>
+    </div>
+
+    <div class="pricing-section reveal">
+      <h3>Investment</h3>
+      <div class="pricing-grid">
+        <div class="price-card rv">
+          <span class="price-name">Introductory</span>
+          <span class="price-amount">£99</span>
+          <span class="price-period">Single Session</span>
+          <ul class="price-features">
+            <li>60-minute deep-dive session</li>
+            <li>Leadership audit & priority-setting</li>
+            <li>Action plan summary</li>
+            <li>No commitment required</li>
+          </ul>
+          <a href="https://wix.to/d6BvWEy" target="_blank" rel="noopener noreferrer" class="book-now">Book Intro Session &#x2192;</a>
+          <a href="https://wix.to/d6BvWEy" target="_blank" rel="noopener noreferrer" class="book-now">Book Now &#x2192;</a>
+        </div>
+        <div class="price-card featured rv">
+          <span class="price-name">Foundation</span>
+          <span class="price-amount">£399</span>
+          <span class="price-period">4-Week Programme</span>
+          <ul class="price-features">
+            <li>4 x 60-minute sessions</li>
+            <li>Personalised development plan</li>
+            <li>Pre & post session materials</li>
+            <li>WhatsApp check-in support</li>
+            <li>End-of-programme review</li>
+          </ul>
+          <a href="https://wix.to/H2Xa8F6" target="_blank" rel="noopener noreferrer" class="book-now">Book 4-Week Programme &#x2192;</a>
+        </div>
+        <div class="price-card rv">
+          <span class="price-name">Transformation</span>
+          <span class="price-amount">£699</span>
+          <span class="price-period">8-Week Programme</span>
+          <ul class="price-features">
+            <li>8 x 60–90-minute sessions</li>
+            <li>Full leadership development plan</li>
+            <li>Interview/promotion prep included</li>
+            <li>Ongoing WhatsApp support</li>
+            <li>Resources & toolkit library</li>
+            <li>Final review & 90-day roadmap</li>
+          </ul>
+          <a href="https://wix.to/hTsR8cG" target="_blank" rel="noopener noreferrer" class="book-now">Book 8-Week Programme &#x2192;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip reveal">
+      <div class="cta-strip-text">
+        <h4>Ready to invest in your leadership?</h4>
+        <p>Book a free 20-minute discovery call to find the right programme for you.</p>
+      </div>
+      <a href="contact.html" class="btn-gold">Book Discovery Call</a>
+    </div>
+  </div>
+</section>
+
+<div class="prog-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PROGRAMME 02 — CORPORATE WORKSHOPS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="programme" id="workshops">
+  <div class="container" style="position:relative;">
+    <div class="prog-number">02</div>
+
+    <div class="prog-header reveal">
+      <div>
+        <span class="prog-tag">Programme 02</span>
+        <h2 class="prog-title">Corporate Leadership <span>Workshops</span></h2>
+        <div class="gold-rule"></div>
+        <p class="prog-description">High-impact, half-day and full-day workshops that transform how your managers lead — built from the frontline, not the classroom.</p>
+        <p class="prog-body">Nuevo Ascend workshops are designed for organisations that want more than a training day. They want a shift. Each workshop draws directly from two decades of multi-site retail leadership and senior experience at Apple — giving your managers practical, immediately applicable tools that make a difference the moment they walk back into work.</p>
+      </div>
+      <div>
+        <div class="info-grid">
+          <div class="info-card rv">
+            <span class="info-card-icon">🏢</span>
+            <span class="info-card-label">Format</span>
+            <span class="info-card-value">In-Person or Virtual</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">⏱</span>
+            <span class="info-card-label">Duration</span>
+            <span class="info-card-value">Half Day or Full Day</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">👥</span>
+            <span class="info-card-label">Group Size</span>
+            <span class="info-card-value">Up to 30 Participants</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">🗓</span>
+            <span class="info-card-label">Booking</span>
+            <span class="info-card-value">Flexible Scheduling Available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div class="content-block">
+        <h3>Workshop Titles</h3>
+        <ul class="check-list">
+          <li><strong>The First-Time Manager</strong> — navigating the transition from colleague to leader</li>
+          <li><strong>Leading High-Performance Teams</strong> — accountability, culture, and results</li>
+          <li><strong>Executive Presence & Leadership Confidence</strong> — how to command the room at any level</li>
+          <li><strong>Customer Experience Leadership</strong> — building cultures that put people first</li>
+          <li><strong>Leading Diverse Teams</strong> — authentic inclusion that delivers results</li>
+          <li><strong>Difficult Conversations Masterclass</strong> — tools for managing performance honestly</li>
+          <li><strong>From Colleague to Leader</strong> — earning respect when you knew everyone first</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h3>What's Included</h3>
+        <ul class="check-list">
+          <li>Pre-workshop needs assessment and discovery call with L&D or HR lead</li>
+          <li>Fully customised workshop content aligned to your organisation</li>
+          <li>Participant workbooks and practical takeaway resources</li>
+          <li>Interactive exercises, group discussions, and real-scenario work</li>
+          <li>Post-workshop action plan for each participant</li>
+          <li>Follow-up report with observations and recommendations for the organisation</li>
+          <li>Optional: follow-on 1:1 coaching for participants at a discounted rate</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div class="content-block">
+        <h3>Who This Is For</h3>
+        <ul class="check-list">
+          <li>HR and L&D teams investing in structured manager development</li>
+          <li>Organisations onboarding newly promoted managers</li>
+          <li>Retail businesses with multi-site or large team structures</li>
+          <li>Companies with DEI commitments that need authentic delivery</li>
+          <li>Graduate and apprenticeship schemes building future leaders</li>
+          <li>Customer-facing businesses improving frontline leadership culture</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h3>Why Nuevo Ascend</h3>
+        <ul class="check-list">
+          <li>Every workshop is built from lived experience — not slides borrowed from generic platforms</li>
+          <li>Content is tailored specifically to your organisation, sector, and team</li>
+          <li>Delivered by a facilitator who has genuinely led at every level being discussed</li>
+          <li>Practical, honest, and memorable — participants leave with tools they actually use</li>
+        </ul>
+      </div>
+    </div>
+
+            <!-- PHOTO STRIP — Workshops -->
+    <div class="photo-strip cols-3 reveal">
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_ddfc395814874009bb0c52de098eab41~mv2.jpg" alt="Leon presenting a workshop to a full room">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_6651ac799ad7456a96780318dcd0270e~mv2.png" alt="Leon facilitating a corporate workshop session">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_7026c7622e824fa69869470ebafa9ba7~mv2.png" alt="Leon leading a corporate leadership workshop">
+      </div>
+    </div>
+<div class="pricing-section reveal">
+      <h3>Investment</h3>
+      <div class="pricing-grid">
+        <div class="price-card rv">
+          <span class="price-name">Half Day</span>
+          <span class="price-amount">£500</span>
+          <span class="price-period">3–4 Hours / Up to 20 people</span>
+          <ul class="price-features">
+            <li>One focused workshop topic</li>
+            <li>Participant workbooks</li>
+            <li>Pre-workshop call</li>
+            <li>Action plan summary</li>
+          </ul>
+          <a href="https://wix.to/MUEiOR5" target="_blank" rel="noopener noreferrer" class="book-now">Book Half Day &#x2192;</a>
+        </div>
+        <div class="price-card featured rv">
+          <span class="price-name">Full Day</span>
+          <span class="price-amount">£1,500</span>
+          <span class="price-period">6–7 Hours / Up to 30 people</span>
+          <ul class="price-features">
+            <li>Full workshop delivery</li>
+            <li>Custom content for your org</li>
+            <li>Participant workbooks & resources</li>
+            <li>Post-workshop report</li>
+            <li>Follow-up recommendations</li>
+          </ul>
+          <a href="https://wix.to/JQytQPx" target="_blank" rel="noopener noreferrer" class="book-now">Book Full Day &#x2192;</a>
+        </div>
+        <div class="price-card rv">
+          <span class="price-name">Workshop Series</span>
+          <span class="price-amount">POA</span>
+          <span class="price-period">Multi-Session Programme</span>
+          <ul class="price-features">
+            <li>3–6 workshop programme</li>
+            <li>Full leadership curriculum</li>
+            <li>Monthly delivery schedule</li>
+            <li>Progress tracking included</li>
+            <li>Bespoke to your organisation</li>
+          </ul>
+          <a href="https://wix.to/FQj8gBx" target="_blank" rel="noopener noreferrer" class="book-now">Enquire Now &#x2192;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip reveal">
+      <div class="cta-strip-text">
+        <h4>Invest in your managers. Watch your teams transform.</h4>
+        <p>Contact us to discuss a bespoke workshop programme for your organisation.</p>
+      </div>
+      <a href="contact.html" class="btn-gold">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+<div class="prog-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PROGRAMME 03 — ORGANISATIONAL CONSULTANCY -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="programme" id="consultancy">
+  <div class="container" style="position:relative;">
+    <div class="prog-number">03</div>
+
+    <div class="prog-header reveal">
+      <div>
+        <span class="prog-tag">Programme 03</span>
+        <h2 class="prog-title">Organisational <span>Consultancy</span></h2>
+        <div class="gold-rule"></div>
+        <p class="prog-description">Strategic advisory for organisations ready to build leadership cultures that actually work.</p>
+        <p class="prog-body">This is for CEOs, HR Directors, and L&D leads who know something needs to change — and want an experienced, external perspective to help them build it. Nuevo Ascend's consultancy offering brings senior operational and people leadership experience directly to your organisation's most pressing challenges: culture, performance, pipeline, and engagement.</p>
+      </div>
+      <div>
+        <div class="info-grid">
+          <div class="info-card rv">
+            <span class="info-card-icon">🏛</span>
+            <span class="info-card-label">Format</span>
+            <span class="info-card-value">Retainer or Project Basis</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">📋</span>
+            <span class="info-card-label">Engagement</span>
+            <span class="info-card-value">1 Month to 12+ Months</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">🤝</span>
+            <span class="info-card-label">Delivery</span>
+            <span class="info-card-value">On-Site, Remote or Hybrid</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">📊</span>
+            <span class="info-card-label">Sectors</span>
+            <span class="info-card-value">Retail, Tech, Services & More</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div class="content-block">
+        <h3>Consultancy Areas</h3>
+        <ul class="check-list">
+          <li>Leadership culture audits — understanding what is actually happening vs what you think is happening</li>
+          <li>Management pipeline development — building a structured pathway from talent to senior leadership</li>
+          <li>DEI leadership support — authentic, operationally grounded diversity strategy</li>
+          <li>Employee engagement and retention strategy</li>
+          <li>Customer experience leadership transformation</li>
+          <li>First-line manager effectiveness programmes</li>
+          <li>Coaching framework design for internal use</li>
+          <li>Senior leadership team development and alignment</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h3>What's Included</h3>
+        <ul class="check-list">
+          <li>Initial diagnostic — discovery sessions with key stakeholders</li>
+          <li>Written findings report with honest observations</li>
+          <li>Strategic recommendations tailored to your organisation</li>
+          <li>Programme design and implementation support</li>
+          <li>Regular progress reviews and reporting</li>
+          <li>Monthly advisory calls on retainer packages</li>
+          <li>Access to Nuevo Ascend's full workshop and coaching suite</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote-callout reveal">
+      <p>"The gap between the leadership culture a business thinks it has and the one it actually has is where most performance problems live. That gap is exactly where I work."</p>
+    </div>
+
+            <!-- PHOTO STRIP — Consultancy -->
+    <div class="photo-strip cols-3 reveal">
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_b77a17a1a660482785e178a304e73110~mv2.png" alt="Strategic Advisory Meeting">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_7603e4ab1f7d4dcf97a0f0805f00e81e~mv2.jpg" alt="Boardroom / Leadership Session">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_f974fa1e1ae2471e8ace9ef4bb758336~mv2.png" alt="Culture Audit in Progress">
+      </div>
+    </div>
+<div class="pricing-section reveal">
+      <h3>Investment</h3>
+      <div class="pricing-grid">
+        <div class="price-card rv">
+          <span class="price-name">Project</span>
+          <span class="price-amount">POA</span>
+          <span class="price-period">Defined scope & deliverables</span>
+          <ul class="price-features">
+            <li>Fixed scope & timeline</li>
+            <li>Audit, report & recommendations</li>
+            <li>Tailored to project need</li>
+            <li>Day rate from £600</li>
+          </ul>
+          <a href="https://wix.to/rXAmKPa" target="_blank" rel="noopener noreferrer" class="book-now">Enquire Now &#x2192;</a>
+        </div>
+        <div class="price-card featured rv">
+          <span class="price-name">Monthly Retainer</span>
+          <span class="price-amount">£1,000</span>
+          <span class="price-period">Per month — SME / Start-up</span>
+          <ul class="price-features">
+            <li>Monthly advisory sessions</li>
+            <li>On-call strategic support</li>
+            <li>Priority workshop booking</li>
+            <li>Quarterly strategy review</li>
+          </ul>
+          <a href="https://wix.to/6bIgGqj" target="_blank" rel="noopener noreferrer" class="book-now">Book Core &#x2192;</a>
+          <a href="https://wix.to/zNJtkyM" target="_blank" rel="noopener noreferrer" class="book-now">Book Retainer &#x2192;</a>
+        </div>
+        <div class="price-card rv">
+          <span class="price-name">Premium Retainer</span>
+          <span class="price-amount">£5,000</span>
+          <span class="price-period">Per month — Corporate</span>
+          <ul class="price-features">
+            <li>Weekly advisory access</li>
+            <li>Full programme management</li>
+            <li>On-site days included</li>
+            <li>Board-level reporting</li>
+            <li>Inclusive of 1 workshop/month</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip reveal">
+      <div class="cta-strip-text">
+        <h4>Let's talk about your organisation.</h4>
+        <p>Every engagement starts with a no-obligation discovery conversation.</p>
+      </div>
+      <a href="contact.html" class="btn-gold">Start the Conversation</a>
+    </div>
+  </div>
+</section>
+
+<div class="prog-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PROGRAMME 04 — YOUNG LEADERS PROGRAMME -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="programme" id="young-leaders">
+  <div class="container" style="position:relative;">
+    <div class="prog-number">04</div>
+
+    <div class="prog-header reveal">
+      <div>
+        <span class="prog-tag">Programme 04</span>
+        <h2 class="prog-title">Young Leaders <span>Programme</span></h2>
+        <div class="gold-rule"></div>
+        <p class="prog-description">For the next generation of managers who deserve the investment that built this business.</p>
+        <p class="prog-body">This programme exists because of a simple truth: the founder was a manager at sixteen with no mentor, no roadmap, and no one who looked like him at the top. He figured it out — and never forgot what it cost to do so without support. The Young Leaders Programme is the investment he never had, now available to every young person who deserves it.</p>
+      </div>
+      <div>
+        <div class="info-grid">
+          <div class="info-card rv">
+            <span class="info-card-icon">🎓</span>
+            <span class="info-card-label">Age Range</span>
+            <span class="info-card-value">16–25 Years Old</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">📍</span>
+            <span class="info-card-label">Delivery</span>
+            <span class="info-card-value">In-Person, Virtual or Hybrid</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">⏱</span>
+            <span class="info-card-label">Duration</span>
+            <span class="info-card-value">4–12 Week Programmes</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">💷</span>
+            <span class="info-card-label">Funding</span>
+            <span class="info-card-value">Grant Options Available</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div class="content-block">
+        <h3>Who This Is For</h3>
+        <ul class="check-list">
+          <li>Young people aged 16–25 in their first management or team leader role</li>
+          <li>Sixth form and college students exploring leadership as a career path</li>
+          <li>Apprentices and graduates entering corporate environments for the first time</li>
+          <li>Young professionals from underrepresented backgrounds in early-career roles</li>
+          <li>Youth organisations, schools, and charities supporting young talent</li>
+          <li>Companies with graduate or apprenticeship schemes seeking structured development</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h3>What's Included</h3>
+        <ul class="check-list">
+          <li>Group coaching sessions with the Nuevo Ascend founder</li>
+          <li>Personal leadership profile — strengths, blind spots, and development areas</li>
+          <li>Career mapping sessions — building a realistic plan for progression</li>
+          <li>Practical modules on confidence, communication, and professional presence</li>
+          <li>Mentoring from senior leaders in the Nuevo Ascend network</li>
+          <li>CV, interview, and personal branding support</li>
+          <li>Certificate of completion and ongoing community access</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div class="content-block">
+        <h3>Programme Themes</h3>
+        <ul class="check-list">
+          <li>What leadership really means — and why it starts with you</li>
+          <li>Building confidence in environments that were not built for you</li>
+          <li>How to earn respect as a young manager</li>
+          <li>Understanding workplace culture and how to navigate it</li>
+          <li>Setting goals and holding yourself accountable</li>
+          <li>Presenting yourself with purpose — in interviews, at work, and online</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h3>Delivery Partners</h3>
+        <ul class="check-list">
+          <li>Secondary schools and sixth forms</li>
+          <li>Further education colleges</li>
+          <li>Universities and student unions</li>
+          <li>Apprenticeship programme providers</li>
+          <li>Youth charities and social enterprises</li>
+          <li>Corporate ERG (Employee Resource Group) programmes</li>
+          <li>Prince's Trust partner organisations</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote-callout reveal">
+      <p>"I was a 16-year-old Black boy leading a team of adults. Nobody gave me a manual. This programme is the manual I wish I had — now given to every young person who deserves it."</p>
+    </div>
+
+            <!-- PHOTO STRIP — Young Leaders -->
+    <div class="photo-strip cols-3 reveal">
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_d5cb000da7e042a48d6bc4ee6d237e53~mv2.png" alt="Leon with Young Programme Participants">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_d244f3910aa24029942791fc493b2b50~mv2.jpg" alt="Group Coaching Session">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_ddfc395814874009bb0c52de098eab41~mv2.jpg" alt="Young leaders workshop in session">
+      </div>
+    </div>
+<div class="pricing-section reveal">
+      <h3>Investment</h3>
+      <div class="pricing-grid">
+        <div class="price-card rv">
+          <span class="price-name">Taster Session</span>
+          <span class="price-amount">£250</span>
+          <span class="price-period">Single 2-hour session</span>
+          <ul class="price-features">
+            <li>Group keynote & workshop</li>
+            <li>Up to 30 participants</li>
+            <li>Ideal for taster events</li>
+            <li>Q&A included</li>
+          </ul>
+          <a href="https://wix.to/N5S5Iqi" target="_blank" rel="noopener noreferrer" class="book-now">Book Panel &#x2192;</a>
+          <a href="https://wix.to/saWh3Tu" target="_blank" rel="noopener noreferrer" class="book-now">Book Taster &#x2192;</a>
+        </div>
+        <div class="price-card featured rv">
+          <span class="price-name">Core Programme</span>
+          <span class="price-amount">£1,000</span>
+          <span class="price-period">4-week / 4 sessions</span>
+          <ul class="price-features">
+            <li>4 group coaching sessions</li>
+            <li>Personal leadership profiles</li>
+            <li>Career mapping included</li>
+            <li>Completion certificates</li>
+            <li>Up to 20 participants</li>
+          </ul>
+        </div>
+        <div class="price-card rv">
+          <span class="price-name">Full Programme</span>
+          <span class="price-amount">£1,500</span>
+          <span class="price-period">8–12 weeks</span>
+          <ul class="price-features">
+            <li>Full curriculum delivery</li>
+            <li>1:1 mentoring sessions</li>
+            <li>CV & interview support</li>
+            <li>Network access ongoing</li>
+            <li>Grant funding eligible</li>
+          </ul>
+          <a href="https://wix.to/Akd3IE4" target="_blank" rel="noopener noreferrer" class="book-now">Book Keynote &#x2192;</a>
+          <a href="https://wix.to/Mtwl4Fu" target="_blank" rel="noopener noreferrer" class="book-now">Book Full &#x2192;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip reveal">
+      <div class="cta-strip-text">
+        <h4>Bring the Young Leaders Programme to your organisation.</h4>
+        <p>Grant and funded delivery options available. Let's talk.</p>
+      </div>
+      <a href="contact.html" class="btn-gold">Enquire Now</a>
+    </div>
+  </div>
+</section>
+
+<div class="prog-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- PROGRAMME 05 — SPEAKING ENGAGEMENTS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="programme" id="speaking">
+  <div class="container" style="position:relative;">
+    <div class="prog-number">05</div>
+
+    <div class="prog-header reveal">
+      <div>
+        <span class="prog-tag">Programme 05</span>
+        <h2 class="prog-title">Speaking <span>Engagements</span></h2>
+        <div class="gold-rule"></div>
+        <p class="prog-description">A story that does not sound like anyone else on your stage — because it isn't.</p>
+        <p class="prog-body">From paper boy at eleven to shaking hands with Apple's Tim Cook. From manager at sixteen to Black British Business Award winner at the FT. The Nuevo Ascend founder brings a speaking style that is honest, powerful, and impossible to forget — built on a life story that proves what is possible when you refuse to accept the ceiling others set for you.</p>
+      </div>
+      <div>
+        <div class="info-grid">
+          <div class="info-card rv">
+            <span class="info-card-icon">🎤</span>
+            <span class="info-card-label">Format</span>
+            <span class="info-card-value">Keynote, Panel or Workshop</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">⏱</span>
+            <span class="info-card-label">Duration</span>
+            <span class="info-card-value">20 mins to Full Day</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">📍</span>
+            <span class="info-card-label">Location</span>
+            <span class="info-card-value">UK-Wide & International</span>
+          </div>
+          <div class="info-card rv">
+            <span class="info-card-icon">👥</span>
+            <span class="info-card-label">Audience</span>
+            <span class="info-card-value">20 to 2,000+ Attendees</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div class="content-block">
+        <h3>Signature Talks</h3>
+        <ul class="check-list">
+          <li><strong>"The 16-Year-Old Manager"</strong> — how a young Black man led a team before most had their first job, and what it taught him about real leadership</li>
+          <li><strong>"From Paper Boy to Tim Cook"</strong> — the full journey from age 11 to Apple's global stage, the BBBA, and building two businesses</li>
+          <li><strong>"Leadership Beyond the Title"</strong> — why operational credibility and consistency matter more than any job title</li>
+          <li><strong>"Representation in the Room"</strong> — building diverse leadership pipelines that work authentically, not performatively</li>
+          <li><strong>"Building a Business While Working Full Time"</strong> — the real story behind founding Nuevo Noir while holding a senior corporate career</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h3>Who Books Nuevo Ascend</h3>
+        <ul class="check-list">
+          <li>Corporate ERG and diversity & inclusion events</li>
+          <li>Leadership conferences and business summits</li>
+          <li>Universities and student leadership societies</li>
+          <li>Graduate and apprenticeship induction programmes</li>
+          <li>Schools and colleges inspiring young people about careers</li>
+          <li>Black Business Network events and BBBA affiliated gatherings</li>
+          <li>TEDx and thought leadership platforms</li>
+          <li>Retail sector events and forums</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="two-col reveal">
+      <div class="content-block">
+        <h3>What's Included</h3>
+        <ul class="check-list">
+          <li>Pre-event discovery call to tailor talk to your audience and theme</li>
+          <li>Fully prepared, professionally delivered keynote or panel contribution</li>
+          <li>Audience Q&A where requested</li>
+          <li>Speaker biography and professional headshot for event materials</li>
+          <li>Optional post-talk workshop add-on available</li>
+          <li>Follow-up resources for attendees</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h3>Why This Talk Lands</h3>
+        <ul class="check-list">
+          <li>Not motivational fluff — a real story with real stakes and real lessons</li>
+          <li>Speaks directly to audiences from underrepresented backgrounds without being tokenistic</li>
+          <li>Equally powerful for corporate leadership audiences, students, and young professionals</li>
+          <li>Award-winning credibility — BBBA 2024, FT-sponsored — gives weight to every word</li>
+          <li>Memorable, human, and impossible to forget</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="quote-callout reveal">
+      <p>"People don't remember slides. They remember stories. And this story — from a paper boy at dawn to a stage with Tim Cook — is one they won't forget."</p>
+    </div>
+
+            <!-- PHOTO STRIP — Speaking -->
+    <div class="photo-strip cols-3 reveal">
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_7603e4ab1f7d4dcf97a0f0805f00e81e~mv2.jpg" alt="Leon speaking at London Metropolitan and London South Bank University">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_f974fa1e1ae2471e8ace9ef4bb758336~mv2.png" alt="Leon delivering a keynote to a large audience">
+      </div>
+      <div class="photo-ph">
+        <img src="assets/images/20ba2a_d5cb000da7e042a48d6bc4ee6d237e53~mv2.png" alt="Leon with participants after a speaking engagement">
+      </div>
+    </div>
+<div class="pricing-section reveal">
+      <h3>Investment</h3>
+      <div class="pricing-grid">
+        <div class="price-card rv">
+          <span class="price-name">Panel / Short Talk</span>
+          <span class="price-amount">£250</span>
+          <span class="price-period">Up to 30 minutes</span>
+          <ul class="price-features">
+            <li>Panel contribution or short keynote</li>
+            <li>Q&A included</li>
+            <li>Pre-event discovery call</li>
+            <li>Speaker bio & headshot</li>
+          </ul>
+        </div>
+        <div class="price-card featured rv">
+          <span class="price-name">Keynote</span>
+          <span class="price-amount">£1,500</span>
+          <span class="price-period">45–60 minutes</span>
+          <ul class="price-features">
+            <li>Full tailored keynote</li>
+            <li>Audience Q&A</li>
+            <li>Attendee follow-up resources</li>
+            <li>Pre-event consultation</li>
+            <li>Expenses included (UK)</li>
+          </ul>
+        </div>
+        <div class="price-card rv">
+          <span class="price-name">Conference / Summit</span>
+          <span class="price-amount">£2,500+</span>
+          <span class="price-period">Half or full day</span>
+          <ul class="price-features">
+            <li>Headline keynote delivery</li>
+            <li>Optional workshop add-on</li>
+            <li>Multi-format engagement</li>
+            <li>Bespoke content creation</li>
+            <li>Growing to £10,000+ as profile builds</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip reveal">
+      <div class="cta-strip-text">
+        <h4>Book a speaker your audience will remember.</h4>
+        <p>Get in touch to check availability and discuss your event.</p>
+      </div>
+      <a href="contact.html" class="btn-gold">Check Availability</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta" id="contact">
+  <p class="hero-eyebrow" style="opacity:1; animation:none;">Nuevo Ascend Ltd</p>
+  <h2>Ready to <span>Ascend?</span></h2>
+  <p>Every engagement starts with a conversation. Book a free 20-minute discovery call and let's talk about what you need.</p>
+  <div class="btn-group">
+    <a href="mailto:contact@nuevoascend.com" class="btn-gold">Book a Discovery Call</a>
+    <a href="mailto:contact@nuevoascend.com" class="btn-outline">contact@nuevoascend.com</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+
+
+
+
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div>
+      <a href="index.html" style="display:inline-block;margin-bottom:16px;text-decoration:none"><img src="assets/images/20ba2a_a200ff1506684226ab8cf4f909ba07a0~mv2.png" alt="Nuevo Ascend" style="height:56px;width:auto;object-fit:contain;display:block"></a>
+      <p class="footer-tagline">Leadership Development &amp; Consultancy. Part of the Nuevo Group. Helping individuals rise and organisations build leadership cultures that work.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Programmes</h4>
+      <ul>
+        <li><a href="programmes.html#coaching">1:1 Coaching</a></li>
+        <li><a href="programmes.html#workshops">Workshops</a></li>
+        <li><a href="programmes.html#consultancy">Consultancy</a></li>
+        <li><a href="programmes.html#young-leaders">Young Leaders</a></li>
+        <li><a href="programmes.html#speaking">Speaking</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="about.html#story">Founder Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Book a Call</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <address>
+        <strong>Email</strong>
+        <a href="mailto:contact@nuevoascend.com">contact@nuevoascend.com</a>
+        <strong style="margin-top:12px">Phone</strong>
+        <a href="tel:08000025557">0800 002 5557</a>
+        <strong style="margin-top:12px">Address</strong>
+        Office 190, 182-184 High Street North<br>East Ham, London E6 2JA
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2026 <span>Nuevo Ascend Ltd</span> &mdash; Part of the Nuevo Group. All rights reserved.</p>
+    <div class="footer-socials">
+      <a href="https://www.facebook.com/share/14gD8bDvkio/?mibextid=wwXIfr" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">fb</a>
+      <a href="https://www.linkedin.com/company/nuevo-ascend/" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">in</a>
+      <a href="https://www.instagram.com/nuevoascend" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">ig</a>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+<script>
+(function(){
+  var d=document,w=window,els,i,b,done=false;
+  function check(){
+    els=d.querySelectorAll('.rv,.rl,.rr');
+    var h=w.innerHeight||d.documentElement.clientHeight||800;
+    var all=true;
+    for(i=0;i<els.length;i++){
+      if(!els[i].classList.contains('an')){
+        b=els[i].getBoundingClientRect();
+        if(b.top<h-40){ els[i].classList.add('an'); }
+        else{ all=false; }
+      }
+    }
+    if(all&&done){ clearInterval(t); }
+  }
+  var t=setInterval(check,120);
+  setTimeout(function(){ done=true; },15000);
+  d.addEventListener('scroll',check,{passive:true});
+  w.addEventListener('scroll',check,{passive:true});
+  check();
+})();
+</script>
+<a class="jump-btn" href="#" aria-label="Back to top" title="Back to top">&#8679;</a>
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv,.rl,.rr'),i,b,done=false;
+  function check(){
+    var h=window.innerHeight||document.documentElement.clientHeight||800;
+    for(i=0;i<els.length;i++){
+      if(!els[i].classList.contains('an')){
+        b=els[i].getBoundingClientRect();
+        if(b.top<h-40){els[i].classList.add('an');}
+      }
+    }
+  }
+  var t=setInterval(check,120);
+  setTimeout(function(){done=true;clearInterval(t);},15000);
+  document.addEventListener('scroll',check,{passive:true});
+  window.addEventListener('scroll',check,{passive:true});
+  check();
+  setTimeout(check,500);
+  setTimeout(check,1200);
+})();
+</script>
+<script src="js/site.js"></script>
+</body>
+</html>
