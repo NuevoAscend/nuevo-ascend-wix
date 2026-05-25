@@ -1,21 +1,20 @@
 import wixLocation from 'wix-location';
-import { PAGES } from 'public/staticSite';
 
-/** Marketing pages that should show the static GitHub Pages site. */
-const STATIC_REDIRECTS = {
-  home: PAGES.home,
-  programmes: PAGES.programmes,
-  'inquiry-services-page': PAGES.contact,
-  contact: PAGES.contact,
+const STATIC_SITE = 'https://nuevoascend.github.io/nuevoascend-site/nuevoascend-site';
+
+const REDIRECTS = {
+  programmes: `${STATIC_SITE}/programmes.html`,
+  'inquiry-services-page': `${STATIC_SITE}/contact.html`,
+  contact: `${STATIC_SITE}/contact.html`,
 };
 
 $w.onReady(function () {
   const slug = wixLocation.path[0];
   if (!slug) {
-    window.location.replace(PAGES.home);
+    window.location.replace(`${STATIC_SITE}/index.html`);
     return;
   }
-  const target = STATIC_REDIRECTS[slug];
+  const target = REDIRECTS[slug];
   if (target) {
     window.location.replace(target);
   }
