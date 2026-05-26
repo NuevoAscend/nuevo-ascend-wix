@@ -62,12 +62,6 @@ nav{position:sticky;top:0;left:0;right:0;z-index:200;display:flex;align-items:ce
 .sh .o{-webkit-text-stroke:1px rgba(255,255,255,.2);color:rgba(0,0,0,0)}
 .gr{width:50px;height:3px;background:#C8960C;margin-bottom:28px}
 
-/* SCROLL REVEAL */
-
-
-
-
-
 /* FOOTER */
 .ft{background:#111111;border-top:1px solid rgba(200,150,12,.12);padding:56px 60px 28px}
 .ftg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
@@ -149,6 +143,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:200;display:flex;align-items:ce
 .fck label a{color:#C8960C;text-decoration:none}
 .bsub{background:#C8960C;color:#000;border:none;font-family:Arial,sans-serif;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;padding:17px 36px;cursor:pointer}
 .bsub:hover{background:#E8B830}
+.bsub:disabled{background:#666;cursor:not-allowed}
 .fnote{font-size:12px;color:#777;line-height:1.5}
 .csd{display:flex;flex-direction:column;gap:0}
 .disc{background:linear-gradient(135deg,rgba(200,150,12,.08),rgba(200,150,12,.03));border:1px solid rgba(200,150,12,.25);padding:32px 28px;margin-bottom:20px}
@@ -182,6 +177,12 @@ nav{position:sticky;top:0;left:0;right:0;z-index:200;display:flex;align-items:ce
 .ccth{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:clamp(40px,6vw,76px);text-transform:uppercase;letter-spacing:-1px;line-height:.95;margin-bottom:18px;color:#FFFFFF}
 .ccth .g{color:#C8960C;display:block}
 .cctp{font-family:Georgia,serif;font-style:italic;font-size:18px;color:#BBBBBB;margin:0 auto 32px;max-width:480px;line-height:1.5}
+
+/* FORM SUCCESS / ERROR MESSAGES */
+.form-msg{display:none;padding:16px 20px;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-top:8px}
+.form-msg.success{display:block;background:rgba(46,139,26,.12);border:1px solid rgba(46,139,26,.4);color:#4CAF50}
+.form-msg.error{display:block;background:rgba(200,50,50,.1);border:1px solid rgba(200,50,50,.3);color:#e57373}
+
 @media(max-width:900px){
   .ph,.bks,.faqs,.cctf{padding:70px 24px}
   .bkg{grid-template-columns:1fr}
@@ -189,41 +190,28 @@ nav{position:sticky;top:0;left:0;right:0;z-index:200;display:flex;align-items:ce
   .frow{grid-template-columns:1fr}
   .faqg{grid-template-columns:1fr}
   .faqi{border-right:none!important}
+  .csd{display:block!important}
+  .disc{margin-bottom:16px!important}
+  .phh1{font-size:clamp(36px,9vw,60px)!important;letter-spacing:-1px!important}
 }
 
+/* Ensure no teal/green background bleeds through */
+html, body {
+  background:#080808!important;
+  min-height:100%;
+}
 
-
-
-
-.rv,.rl,
-
-
-/* SCROLL REVEAL */
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* REVEAL */
-
-
-
- to{opacity:1;transform:none} }
- to{opacity:1;transform:none} }
-  to{opacity:1;transform:none} }
-
-
-.jb{position:fixed;bottom:24px;right:20px;z-index:999;background:#C8960C;color:#000;width:48px;height:48px;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:22px;font-weight:900;text-decoration:none;box-shadow:0 4px 16px rgba(200,150,12,.5)}
-@media(max-width:900px){.jb{display:flex!important}}
-
+.dr { z-index:9997!important; }
+.ov { z-index:9996!important; }
+body, html { overflow-x:hidden!important; max-width:100vw!important; }
+img:not([style*="height:90px"]):not([style*="height:48px"]) {
+  max-width:100%!important;
+  height:auto!important;
+}
+.sp-strip,.sp-main,.sp-embed,.sp-embed iframe{max-width:100%!important}
+.sp-embed iframe{height:232px!important;width:100%!important}
+.sp-strip.is-playing .sp-card{display:none!important}
+.sp-strip.is-playing .sp-embed{display:block!important}
 
 .rv.an  { animation: rvUp   0.65s ease both }
 .rl.an  { animation: rvLeft 0.65s ease both }
@@ -232,48 +220,8 @@ nav{position:sticky;top:0;left:0;right:0;z-index:200;display:flex;align-items:ce
 @keyframes rvLeft  { from{opacity:0;transform:translateX(-24px)} to{opacity:1;transform:none} }
 @keyframes rvRight { from{opacity:0;transform:translateX(24px)}  to{opacity:1;transform:none} }
 
-
-@media(max-width:900px){
-  
-@media(max-width:900px){
-  body,html{overflow-x:hidden!important}
-  .ph,.bks,.cmain,.faqs,.cctf{
-    padding:50px 16px!important;
-    max-width:100%!important
-  }
-  .bkg{grid-template-columns:1fr!important}
-  .cmain{grid-template-columns:1fr!important;gap:32px!important}
-  .frow{grid-template-columns:1fr!important}
-  .faqg{grid-template-columns:1fr!important}
-  .faqi{border-right:none!important}
-  .csd{display:block!important}
-  .disc{margin-bottom:16px!important}
-  .phh1{font-size:clamp(36px,9vw,60px)!important;letter-spacing:-1px!important}
-}
-
-
-/* Ensure no teal/green background bleeds through */
-html, body {
-  background:#080808!important;
-  min-height:100%;
-}
-
-
-
-  .dr { z-index:9997!important; }
-  .ov { z-index:9996!important; }
-  /* Mobile body overflow */
-  body, html { overflow-x:hidden!important; max-width:100vw!important; }
-  /* Fix all sections to not overflow */
-  img:not([style*="height:90px"]):not([style*="height:48px"]) {
-    max-width:100%!important;
-    height:auto!important;
-  }
-  .sp-strip,.sp-main,.sp-embed,.sp-embed iframe{max-width:100%!important}
-  .sp-embed iframe{height:232px!important;width:100%!important}
-  .sp-strip.is-playing .sp-card{display:none!important}
-  .sp-strip.is-playing .sp-embed{display:block!important}
-}
+.jb{position:fixed;bottom:24px;right:20px;z-index:999;background:#C8960C;color:#000;width:48px;height:48px;border-radius:50%;display:none;align-items:center;justify-content:center;font-size:22px;font-weight:900;text-decoration:none;box-shadow:0 4px 16px rgba(200,150,12,.5)}
+@media(max-width:900px){.jb{display:flex!important}}
 
 </style>
 <link rel="stylesheet" href="css/site.css">
@@ -357,19 +305,19 @@ html, body {
 <section class="cmain">
   <div class="cfs">
     <h2 class="rv">Book or <span>Enquire</span></h2>
-    <form class="cfrm" action="mailto:contact@nuevoascend.com" method="get" enctype="text/plain">
+    <form class="cfrm" id="enquiryForm">
       <div class="frow">
-        <div class="fg rv"><label>First Name</label><input type="text" name="firstname" placeholder="Your first name"></div>
-        <div class="fg rv"><label>Last Name</label><input type="text" name="lastname" placeholder="Your last name"></div>
+        <div class="fg rv"><label for="firstname">First Name</label><input type="text" id="firstname" name="firstname" placeholder="Your first name" required></div>
+        <div class="fg rv"><label for="lastname">Last Name</label><input type="text" id="lastname" name="lastname" placeholder="Your last name" required></div>
       </div>
       <div class="frow">
-        <div class="fg rv"><label>Email Address</label><input type="email" name="email" placeholder="your@email.com"></div>
-        <div class="fg rv"><label>Phone Number</label><input type="tel" name="phone" placeholder="+44 or 07..."></div>
+        <div class="fg rv"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="your@email.com" required></div>
+        <div class="fg rv"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="+44 or 07..."></div>
       </div>
-      <div class="fg rv"><label>Organisation</label><input type="text" name="org" placeholder="Your organisation (if applicable)"></div>
+      <div class="fg rv"><label for="org">Organisation</label><input type="text" id="org" name="org" placeholder="Your organisation (if applicable)"></div>
       <div class="fg rv">
-        <label>What Are You Interested In?</label>
-        <select name="interest">
+        <label for="interest">What Are You Interested In?</label>
+        <select id="interest" name="interest" required>
           <option value="">Select a programme or enquiry type</option>
           <option value="discovery">Free Discovery Call (20 mins)</option>
           <option value="coaching-intro">1:1 Coaching &mdash; Intro Session (&#163;99)</option>
@@ -382,12 +330,14 @@ html, body {
           <option value="other">General Enquiry</option>
         </select>
       </div>
-      <div class="fg rv"><label>Tell Us About Your Goals</label><textarea name="message" placeholder="What are you hoping to achieve?"></textarea></div>
+      <div class="fg rv"><label for="message">Tell Us About Your Goals</label><textarea id="message" name="message" placeholder="What are you hoping to achieve?"></textarea></div>
       <div class="fck rv"><input type="checkbox" id="consent" name="consent" required><label for="consent">I agree to Nuevo Ascend Ltd contacting me about my enquiry. My data will be handled with care and not shared with third parties.</label></div>
       <div class="rv" style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-        <button type="submit" class="bsub">Send Enquiry &#x2192;</button>
+        <button type="submit" class="bsub" id="submitBtn">Send Enquiry &#x2192;</button>
         <p class="fnote"><strong>Response within 24 hours.</strong><br>We&apos;ll be in touch to arrange next steps.</p>
       </div>
+      <div class="form-msg" id="formSuccess">&#10003; &nbsp;Thank you! We&apos;ll be in touch within 24 hours.</div>
+      <div class="form-msg" id="formError">Something went wrong. Please email us at contact@nuevoascend.com</div>
     </form>
   </div>
   <div class="csd rv">
@@ -472,38 +422,12 @@ html, body {
   </div>
 </footer>
 
-
-
-
-
 <script>
+/* ── Scroll reveal ── */
 (function(){
-  var d=document,w=window,els,i,b,done=false;
+  var els,i,b,done=false;
   function check(){
-    els=d.querySelectorAll('.rv,.rl,.rr');
-    var h=w.innerHeight||d.documentElement.clientHeight||800;
-    var all=true;
-    for(i=0;i<els.length;i++){
-      if(!els[i].classList.contains('an')){
-        b=els[i].getBoundingClientRect();
-        if(b.top<h-40){ els[i].classList.add('an'); }
-        else{ all=false; }
-      }
-    }
-    if(all&&done){ clearInterval(t); }
-  }
-  var t=setInterval(check,120);
-  setTimeout(function(){ done=true; },15000);
-  d.addEventListener('scroll',check,{passive:true});
-  w.addEventListener('scroll',check,{passive:true});
-  check();
-})();
-</script>
-<a class="jb" href="#" aria-label="Back to top">&#8679;</a>
-<script>
-(function(){
-  var els=document.querySelectorAll('.rv,.rl,.rr'),i,b,done=false;
-  function check(){
+    els=document.querySelectorAll('.rv,.rl,.rr');
     var h=window.innerHeight||document.documentElement.clientHeight||800;
     for(i=0;i<els.length;i++){
       if(!els[i].classList.contains('an')){
@@ -521,6 +445,62 @@ html, body {
   setTimeout(check,1200);
 })();
 </script>
+
+<script>
+/* ── Formspree form submission ── */
+(function(){
+  var form    = document.getElementById('enquiryForm');
+  var btn     = document.getElementById('submitBtn');
+  var success = document.getElementById('formSuccess');
+  var error   = document.getElementById('formError');
+
+  if(!form) return;
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+
+    // Hide any previous messages
+    success.style.display = 'none';
+    error.style.display   = 'none';
+
+    // Disable button while submitting
+    btn.disabled    = true;
+    btn.textContent = 'Sending…';
+
+    var data = {
+      firstname : form.firstname.value,
+      lastname  : form.lastname.value,
+      email     : form.email.value,
+      phone     : form.phone.value,
+      org       : form.org.value,
+      interest  : form.interest.value,
+      message   : form.message.value
+    };
+
+    try {
+      var res = await fetch('https://formspree.io/f/mykvndvy', {
+        method  : 'POST',
+        headers : { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body    : JSON.stringify(data)
+      });
+
+      if(res.ok){
+        success.style.display = 'block';
+        form.reset();
+        btn.textContent = 'Sent \u2713';
+      } else {
+        throw new Error('Server error');
+      }
+    } catch(err){
+      error.style.display = 'block';
+      btn.disabled    = false;
+      btn.textContent = 'Send Enquiry \u2192';
+    }
+  });
+})();
+</script>
+
+<a class="jb" href="#" aria-label="Back to top">&#8679;</a>
 <script src="js/site.js?v=2"></script>
 </body>
 </html>
